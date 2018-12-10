@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E400A81E21BEED5900308820 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E400A81D21BEED5900308820 /* main.cpp */; };
+		E400A82921BEF16100308820 /* lock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E400A82721BEF16100308820 /* lock.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		E400A81A21BEED5900308820 /* MutexLockApp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MutexLockApp; sourceTree = BUILT_PRODUCTS_DIR; };
 		E400A81D21BEED5900308820 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		E400A82721BEF16100308820 /* lock.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lock.cpp; sourceTree = "<group>"; };
+		E400A82821BEF16100308820 /* lock.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = lock.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,7 @@
 		E400A82421BEED6700308820 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				E400A82621BEF13800308820 /* lock */,
 				E400A81D21BEED5900308820 /* main.cpp */,
 			);
 			path = src;
@@ -76,6 +80,15 @@
 			children = (
 			);
 			path = includes;
+			sourceTree = "<group>";
+		};
+		E400A82621BEF13800308820 /* lock */ = {
+			isa = PBXGroup;
+			children = (
+				E400A82721BEF16100308820 /* lock.cpp */,
+				E400A82821BEF16100308820 /* lock.hpp */,
+			);
+			path = lock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E400A82921BEF16100308820 /* lock.cpp in Sources */,
 				E400A81E21BEED5900308820 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
