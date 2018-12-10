@@ -10,5 +10,13 @@
 #define lock_hpp
 
 #include <stdio.h>
+#include <string>
+
+class Lock {
+private:
+    std::string name;
+public:
+    Lock(std::string);
+};
 
 #endif /* lock_hpp */

@@ -7,3 +7,8 @@
 //
 
 #include "lock.hpp"
+
+Lock::Lock(std::string name)
+{
+    this->name = name;
+}
