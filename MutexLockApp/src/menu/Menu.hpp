@@ -16,6 +16,7 @@
 class Menu
 {
 public:
+    int virtual pure() = 0;
     void displayMenu();
 };
 

@@ -12,8 +12,5 @@
 int main(int argc, const char * argv[]) {
     
     
-    Menu* menu = new Menu();
-    menu->displayMenu();
-    
     return 0;
 }
