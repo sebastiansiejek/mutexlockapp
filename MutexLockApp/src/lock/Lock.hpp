@@ -9,10 +9,11 @@
 #ifndef lock_hpp
 #define lock_hpp
 
+#include "../mutexLock/mutexLock.hpp"
 #include <stdio.h>
 #include <string>
 
-class Lock {
+class Lock : public MutexLock {
 private:
     std::string name;
 public:
