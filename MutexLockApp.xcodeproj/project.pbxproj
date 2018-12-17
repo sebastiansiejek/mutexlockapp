@@ -63,7 +63,6 @@
 		E400A81C21BEED5900308820 /* MutexLockApp */ = {
 			isa = PBXGroup;
 			children = (
-				E400A82521BEEEE200308820 /* includes */,
 				E400A82421BEED6700308820 /* src */,
 			);
 			path = MutexLockApp;
@@ -77,13 +76,6 @@
 				E400A81D21BEED5900308820 /* main.cpp */,
 			);
 			path = src;
-			sourceTree = "<group>";
-		};
-		E400A82521BEEEE200308820 /* includes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = includes;
 			sourceTree = "<group>";
 		};
 		E400A82621BEF13800308820 /* lock */ = {

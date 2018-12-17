@@ -11,4 +11,9 @@
 
 #include <stdio.h>
 
+class Thread
+{
+    
+};
+
 #endif /* Thread_hpp */
