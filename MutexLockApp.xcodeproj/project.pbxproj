@@ -10,6 +10,7 @@
 		E400A81E21BEED5900308820 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E400A81D21BEED5900308820 /* main.cpp */; };
 		E400A82921BEF16100308820 /* Lock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E400A82721BEF16100308820 /* Lock.cpp */; };
 		E44F850F21C8286400CE67A6 /* Thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44F850D21C8286400CE67A6 /* Thread.cpp */; };
+		E44F851321C82B7700CE67A6 /* mutexLock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44F851121C82B7700CE67A6 /* mutexLock.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		E400A82821BEF16100308820 /* Lock.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Lock.hpp; sourceTree = "<group>"; };
 		E44F850D21C8286400CE67A6 /* Thread.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Thread.cpp; sourceTree = "<group>"; };
 		E44F850E21C8286400CE67A6 /* Thread.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Thread.hpp; sourceTree = "<group>"; };
+		E44F851121C82B7700CE67A6 /* mutexLock.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = mutexLock.cpp; sourceTree = "<group>"; };
+		E44F851221C82B7700CE67A6 /* mutexLock.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = mutexLock.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				E44F850C21C8282C00CE67A6 /* thread */,
+				E44F851021C82B3900CE67A6 /* mutexLock */,
 				E400A82621BEF13800308820 /* lock */,
 				E400A81D21BEED5900308820 /* main.cpp */,
 			);
@@ -94,6 +98,15 @@
 				E44F850E21C8286400CE67A6 /* Thread.hpp */,
 			);
 			path = thread;
+			sourceTree = "<group>";
+		};
+		E44F851021C82B3900CE67A6 /* mutexLock */ = {
+			isa = PBXGroup;
+			children = (
+				E44F851121C82B7700CE67A6 /* mutexLock.cpp */,
+				E44F851221C82B7700CE67A6 /* mutexLock.hpp */,
+			);
+			path = mutexLock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +167,7 @@
 			files = (
 				E400A82921BEF16100308820 /* Lock.cpp in Sources */,
 				E400A81E21BEED5900308820 /* main.cpp in Sources */,
+				E44F851321C82B7700CE67A6 /* mutexLock.cpp in Sources */,
 				E44F850F21C8286400CE67A6 /* Thread.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
