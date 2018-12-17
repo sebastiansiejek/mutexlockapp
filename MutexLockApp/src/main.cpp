@@ -7,10 +7,10 @@
 //
 
 #include <iostream>
-#include "lock/lock.hpp"
+#include "lock/Lock.hpp"
 
 int main(int argc, const char * argv[]) {
     
-    new Lock();
+    new Lock("test");
     return 0;
 }

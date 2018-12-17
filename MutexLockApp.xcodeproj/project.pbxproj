@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E400A81E21BEED5900308820 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E400A81D21BEED5900308820 /* main.cpp */; };
-		E400A82921BEF16100308820 /* lock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E400A82721BEF16100308820 /* lock.cpp */; };
+		E400A82921BEF16100308820 /* Lock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E400A82721BEF16100308820 /* Lock.cpp */; };
+		E44F850F21C8286400CE67A6 /* Thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44F850D21C8286400CE67A6 /* Thread.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,8 +27,10 @@
 /* Begin PBXFileReference section */
 		E400A81A21BEED5900308820 /* MutexLockApp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MutexLockApp; sourceTree = BUILT_PRODUCTS_DIR; };
 		E400A81D21BEED5900308820 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		E400A82721BEF16100308820 /* lock.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lock.cpp; sourceTree = "<group>"; };
-		E400A82821BEF16100308820 /* lock.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = lock.hpp; sourceTree = "<group>"; };
+		E400A82721BEF16100308820 /* Lock.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Lock.cpp; sourceTree = "<group>"; };
+		E400A82821BEF16100308820 /* Lock.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Lock.hpp; sourceTree = "<group>"; };
+		E44F850D21C8286400CE67A6 /* Thread.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Thread.cpp; sourceTree = "<group>"; };
+		E44F850E21C8286400CE67A6 /* Thread.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Thread.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +72,7 @@
 		E400A82421BEED6700308820 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				E44F850C21C8282C00CE67A6 /* thread */,
 				E400A82621BEF13800308820 /* lock */,
 				E400A81D21BEED5900308820 /* main.cpp */,
 			);
@@ -85,10 +89,19 @@
 		E400A82621BEF13800308820 /* lock */ = {
 			isa = PBXGroup;
 			children = (
-				E400A82721BEF16100308820 /* lock.cpp */,
-				E400A82821BEF16100308820 /* lock.hpp */,
+				E400A82721BEF16100308820 /* Lock.cpp */,
+				E400A82821BEF16100308820 /* Lock.hpp */,
 			);
 			path = lock;
+			sourceTree = "<group>";
+		};
+		E44F850C21C8282C00CE67A6 /* thread */ = {
+			isa = PBXGroup;
+			children = (
+				E44F850D21C8286400CE67A6 /* Thread.cpp */,
+				E44F850E21C8286400CE67A6 /* Thread.hpp */,
+			);
+			path = thread;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,8 +160,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E400A82921BEF16100308820 /* lock.cpp in Sources */,
+				E400A82921BEF16100308820 /* Lock.cpp in Sources */,
 				E400A81E21BEED5900308820 /* main.cpp in Sources */,
+				E44F850F21C8286400CE67A6 /* Thread.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
