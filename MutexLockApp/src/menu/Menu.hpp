@@ -12,12 +12,17 @@
 #include <stdio.h>
 #include <iostream>
 #include "../lock/Lock.hpp"
+#include "../thread/Thread.hpp"
 
 class Menu
 {
+private:
+    int selectedOption;
 public:
-    int virtual pure() = 0;
+//    int virtual pure() = 0;
     void displayMenu();
+    int selectOption(int);
+    Lock* factory();
 };
 
 #endif /* Menu_hpp */

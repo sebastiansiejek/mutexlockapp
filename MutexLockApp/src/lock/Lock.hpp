@@ -13,11 +13,12 @@
 #include <stdio.h>
 #include <string>
 
-class Lock : public MutexLock {
+class Lock {
 private:
     std::string name;
 public:
     Lock(std::string);
+    std::string getName();
 };
 
 #endif /* lock_hpp */

@@ -11,4 +11,10 @@
 Lock::Lock(std::string name)
 {
     this->name = name;
+    printf("Konstruktor lock");
+}
+
+std::string Lock::getName()
+{
+    return this->name;
 }

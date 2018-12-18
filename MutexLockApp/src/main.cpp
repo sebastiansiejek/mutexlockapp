@@ -6,11 +6,22 @@
 //  Copyright © 2018 Sebastian Siejek. All rights reserved.
 //
 
-#include <iostream>
 #include "menu/Menu.hpp"
+#include <vector>
+#include <iostream>
 
 int main(int argc, const char * argv[]) {
     
+    std::vector<Lock*> lockVec;
+    std::vector<Thread*> threadLock;
+    
+    Menu* menu = new Menu();
+    int switcher = 1;
+    while (switcher != 0) {
+        menu->displayMenu();
+        std::cout << "numer: ";
+        std::cin >> switcher;
+    }
     
     return 0;
 }

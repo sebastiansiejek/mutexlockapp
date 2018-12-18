@@ -16,3 +16,21 @@ void Menu::displayMenu()
         "[2] Thread \n"
     ;
 }
+
+int Menu::selectOption(int optionNumber)
+{
+    return this->selectedOption = optionNumber;
+}
+
+Lock* Menu::factory()
+{
+    switch (this->selectedOption) {
+        case 1:
+            return new Lock("test");
+            break;
+            
+        default:
+            break;
+    }
+    return new Lock("test");
+}
