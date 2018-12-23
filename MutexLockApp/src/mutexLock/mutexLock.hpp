@@ -11,12 +11,12 @@
 
 #include <stdio.h>
 #include <vector>
+#include <string>
 
 class MutexLock
 {
-private:
 public:
-    int virtual pure() = 0;
+//    virtual int pure() = 0;
     
 };
 

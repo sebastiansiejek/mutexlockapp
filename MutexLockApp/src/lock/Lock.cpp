@@ -10,11 +10,11 @@
 
 Lock::Lock(std::string name)
 {
-    this->name = name;
+    this->_name = name;
     std::cout << "Lock " << name << " was created.\n";
 }
 
 std::string Lock::getName()
 {
-    return this->name;
+    return this->_name;
 }

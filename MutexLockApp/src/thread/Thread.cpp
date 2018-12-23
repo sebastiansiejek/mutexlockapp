@@ -7,3 +7,8 @@
 //
 
 #include "Thread.hpp"
+
+Thread::Thread(std::string name)
+{
+    this->_name = name;
+}

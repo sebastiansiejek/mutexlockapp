@@ -14,9 +14,9 @@
 #include <string>
 #include <iostream>
 
-class Lock {
+class Lock : public MutexLock {
 private:
-    std::string name;
+    std::string _name;
 public:
     Lock(std::string);
     std::string getName();

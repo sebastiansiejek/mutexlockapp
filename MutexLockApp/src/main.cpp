@@ -7,10 +7,13 @@
 //
 
 #include "menu/Menu.hpp"
+#include "./mutexLock/mutexLock.hpp"
 #include <vector>
 #include <iostream>
 
 int main(int argc, const char * argv[]) {
+    
+//    MutexLock *mutex = new Thread("test");
     
     std::vector<Lock*> lockVec;
     std::vector<Thread*> threadLock;
@@ -38,7 +41,7 @@ int main(int argc, const char * argv[]) {
                 lockVec.push_back(new Lock("Lock 1"));
                 break;
             case 2:
-                threadLock.push_back(new Thread());
+                threadLock.push_back(new Thread("test"));
                 break;
             default:
                 break;

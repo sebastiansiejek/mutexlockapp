@@ -10,12 +10,16 @@
 #define Thread_hpp
 
 #include <stdio.h>
+#include <string>
 #include "Thread.hpp"
 #include "../mutexLock/mutexLock.hpp"
 
-class Thread
+class Thread : public MutexLock
 {
-    
+private:
+    std::string _name;
+public:
+    Thread(std::string);
 };
 
 #endif /* Thread_hpp */
