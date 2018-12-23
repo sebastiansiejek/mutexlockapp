@@ -11,7 +11,7 @@
 Lock::Lock(std::string name)
 {
     this->name = name;
-    printf("Konstruktor lock");
+    std::cout << "Lock " << name << " was created.\n";
 }
 
 std::string Lock::getName()

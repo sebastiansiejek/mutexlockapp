@@ -11,26 +11,7 @@
 void Menu::displayMenu()
 {
     std::cout <<
-        "create: \n"
-        "[1] Lock \n"
-        "[2] Thread \n"
+        "[1] Create Lock \n"
+        "[2] Create Thread \n"
     ;
-}
-
-int Menu::selectOption(int optionNumber)
-{
-    return this->selectedOption = optionNumber;
-}
-
-Lock* Menu::factory()
-{
-    switch (this->selectedOption) {
-        case 1:
-            return new Lock("test");
-            break;
-            
-        default:
-            break;
-    }
-    return new Lock("test");
 }

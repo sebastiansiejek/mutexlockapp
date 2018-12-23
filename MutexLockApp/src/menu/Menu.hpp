@@ -11,18 +11,21 @@
 
 #include <stdio.h>
 #include <iostream>
+#include <vector>
 #include "../lock/Lock.hpp"
 #include "../thread/Thread.hpp"
 
+struct test{
+    std::vector<Lock*> locksVec;
+};
 class Menu
 {
 private:
     int selectedOption;
+    std::vector<Lock*> locksVec;
 public:
 //    int virtual pure() = 0;
     void displayMenu();
-    int selectOption(int);
-    Lock* factory();
 };
 
 #endif /* Menu_hpp */

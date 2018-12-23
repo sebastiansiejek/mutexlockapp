@@ -12,6 +12,7 @@
 #include "../mutexLock/mutexLock.hpp"
 #include <stdio.h>
 #include <string>
+#include <iostream>
 
 class Lock {
 private:
