@@ -7,8 +7,8 @@
 //
 
 #include "mutexLock.hpp"
-//
-//int MutexLock::pure()
-//{
-//    return 0;
-//}
+
+int MutexLock::pure()
+{
+    return 0;
+}
