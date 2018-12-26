@@ -12,3 +12,8 @@ int MutexLock::pure()
 {
     return 0;
 }
+
+std::string MutexLock::getName()
+{
+    return "test";
+}

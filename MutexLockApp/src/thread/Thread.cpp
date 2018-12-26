@@ -12,3 +12,8 @@ Thread::Thread(std::string name)
 {
     this->_name = name;
 }
+
+std::string Thread::getName()
+{
+    return this->_name;
+}

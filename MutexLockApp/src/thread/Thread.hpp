@@ -20,6 +20,7 @@ private:
     std::string _name;
 public:
     Thread(std::string);
+    std::string getName() override;
 };
 
 #endif /* Thread_hpp */

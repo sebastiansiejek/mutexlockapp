@@ -19,7 +19,7 @@ private:
     std::string _name;
 public:
     Lock(std::string);
-    std::string getName();
+    std::string getName() override;
 };
 
 #endif /* lock_hpp */

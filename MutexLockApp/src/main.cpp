@@ -13,8 +13,8 @@
 
 int main(int argc, const char * argv[]) {
     
-    Thread * thread = MutexLockFactory::createThread();
-    Lock * lock = MutexLockFactory::createLock();
+//    Thread * thread = MutexLockFactory::createThread();
+//    Lock * lock = MutexLockFactory::createLock();
     
     return 0;
 
