@@ -17,7 +17,6 @@
 class MutexLockFactory
 {
 public:
-    static MutexLock * createMutexLock(int);
     static class Thread * createThread();
     static class Lock * createLock();
 };

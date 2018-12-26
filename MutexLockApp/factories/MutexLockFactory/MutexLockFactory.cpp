@@ -8,22 +8,6 @@
 
 #include "MutexLockFactory.hpp"
 
-MutexLock * MutexLockFactory::createMutexLock(int type) {
-    
-    MutexLock *mutexLock = NULL;
-    
-    switch(type) {
-        case 1:
-            mutexLock = new class Thread("test");
-            break;
-        default:
-            printf("%s", "Invalid type");
-            return NULL;
-    }
-    
-    return NULL;
-}
-
 Lock * MutexLockFactory::createLock()
 {
     return new class Lock("test");
