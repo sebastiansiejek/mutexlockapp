@@ -12,7 +12,7 @@
 		E44F850F21C8286400CE67A6 /* Thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44F850D21C8286400CE67A6 /* Thread.cpp */; };
 		E44F851321C82B7700CE67A6 /* mutexLock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44F851121C82B7700CE67A6 /* mutexLock.cpp */; };
 		E44F851821C82DEF00CE67A6 /* Menu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44F851621C82DEF00CE67A6 /* Menu.cpp */; };
-		E44F851D21C842E400CE67A6 /* factoryMutexLock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44F851B21C842E400CE67A6 /* factoryMutexLock.cpp */; };
+		E4B204BE21D25D020002B871 /* MutexLockFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B204BC21D25D020002B871 /* MutexLockFactory.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,8 +38,8 @@
 		E44F851221C82B7700CE67A6 /* mutexLock.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = mutexLock.hpp; sourceTree = "<group>"; };
 		E44F851621C82DEF00CE67A6 /* Menu.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Menu.cpp; sourceTree = "<group>"; };
 		E44F851721C82DEF00CE67A6 /* Menu.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Menu.hpp; sourceTree = "<group>"; };
-		E44F851B21C842E400CE67A6 /* factoryMutexLock.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = factoryMutexLock.cpp; sourceTree = "<group>"; };
-		E44F851C21C842E400CE67A6 /* factoryMutexLock.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = factoryMutexLock.hpp; sourceTree = "<group>"; };
+		E4B204BC21D25D020002B871 /* MutexLockFactory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MutexLockFactory.cpp; sourceTree = "<group>"; };
+		E4B204BD21D25D020002B871 /* MutexLockFactory.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MutexLockFactory.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,18 +129,18 @@
 		E44F851921C842C900CE67A6 /* factories */ = {
 			isa = PBXGroup;
 			children = (
-				E44F851A21C842D100CE67A6 /* factoryMutexLock */,
+				E4B204BB21D25CE80002B871 /* MutexLockFactory */,
 			);
 			path = factories;
 			sourceTree = "<group>";
 		};
-		E44F851A21C842D100CE67A6 /* factoryMutexLock */ = {
+		E4B204BB21D25CE80002B871 /* MutexLockFactory */ = {
 			isa = PBXGroup;
 			children = (
-				E44F851B21C842E400CE67A6 /* factoryMutexLock.cpp */,
-				E44F851C21C842E400CE67A6 /* factoryMutexLock.hpp */,
+				E4B204BC21D25D020002B871 /* MutexLockFactory.cpp */,
+				E4B204BD21D25D020002B871 /* MutexLockFactory.hpp */,
 			);
-			path = factoryMutexLock;
+			path = MutexLockFactory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,8 +202,8 @@
 				E400A82921BEF16100308820 /* Lock.cpp in Sources */,
 				E400A81E21BEED5900308820 /* main.cpp in Sources */,
 				E44F851321C82B7700CE67A6 /* mutexLock.cpp in Sources */,
-				E44F851D21C842E400CE67A6 /* factoryMutexLock.cpp in Sources */,
 				E44F850F21C8286400CE67A6 /* Thread.cpp in Sources */,
+				E4B204BE21D25D020002B871 /* MutexLockFactory.cpp in Sources */,
 				E44F851821C82DEF00CE67A6 /* Menu.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

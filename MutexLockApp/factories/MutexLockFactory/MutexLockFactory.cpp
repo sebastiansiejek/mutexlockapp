@@ -6,9 +6,9 @@
 //  Copyright © 2018 Sebastian Siejek. All rights reserved.
 //
 
-#include "factoryMutexLock.hpp"
+#include "MutexLockFactory.hpp"
 
-MutexLock * FactoryMutexLock::createMutexLock(int type) {
+MutexLock * MutexLockFactory::createMutexLock(int type) {
     
     MutexLock *mutexLock = NULL;
     
@@ -22,4 +22,14 @@ MutexLock * FactoryMutexLock::createMutexLock(int type) {
     }
     
     return NULL;
+}
+
+Lock * MutexLockFactory::createLock()
+{
+    return new class Lock("test");
+}
+
+Thread * MutexLockFactory::createThread()
+{
+    return new class Thread("test");
 }

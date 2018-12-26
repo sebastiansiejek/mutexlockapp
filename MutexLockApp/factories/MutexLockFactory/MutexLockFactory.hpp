@@ -14,14 +14,12 @@
 #include "../../src/lock/Lock.hpp"
 #include "../../src/mutexLock/mutexLock.hpp"
 
-class FactoryMutexLock
+class MutexLockFactory
 {
-enum MutexType{
-    Thread,
-    Lock
-};
 public:
-    MutexLock * createMutexLock(int);
+    static MutexLock * createMutexLock(int);
+    static class Thread * createThread();
+    static class Lock * createLock();
 };
 
 #endif /* factoryMutexLock_hpp */
