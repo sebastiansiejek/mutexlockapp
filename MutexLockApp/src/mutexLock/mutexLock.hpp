@@ -16,8 +16,7 @@
 class MutexLock
 {
 public:
-//    virtual int pure() = 0;
-    
+    virtual int pure();
 };
 
 #endif /* mutexLock_hpp */
