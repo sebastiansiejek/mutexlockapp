@@ -17,6 +17,7 @@
 class MutexLockFactory
 {
 public:
+    virtual int pure() = 0;
     static class Thread * createThread();
     static class Lock * createLock();
 };
