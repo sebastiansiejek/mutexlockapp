@@ -14,9 +14,9 @@
 class MutexLockApp : public Menu
 {
 public:
+    MutexLockStore *store = new MutexLockStore;
     MutexLockApp()
     {
-        MutexLockStore *store = new MutexLockStore;
         int option = 1;
 
         while(option != 0)
