@@ -11,8 +11,8 @@
 void Menu::displayMenu()
 {
     std::cout <<
-        "[0] Exit \n"
         "[1] Create Lock \n"
         "[2] Create Thread \n"
+        "[0] Exit \n"
     ;
 }
