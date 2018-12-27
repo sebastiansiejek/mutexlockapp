@@ -17,7 +17,13 @@ void Menu::displayMenu()
     ;
 }
 
-int Menu::selectOption(int option)
+void Menu::selectOption(int option)
 {
-    return this->selectedOption = option;
+    switch (option) {
+        case 1:
+            MutexLockFactory::createThread();
+            break;
+        default:
+            break;
+    }
 }

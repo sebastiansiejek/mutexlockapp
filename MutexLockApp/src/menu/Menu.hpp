@@ -12,6 +12,8 @@
 #include <stdio.h>
 #include <iostream>
 #include <vector>
+#include "./../factories/MutexLockFactory/MutexLockFactory.hpp"
+#include "./../stores/mutexLockStore/MutexLockStore.hpp"
 
 class Menu
 {
@@ -20,7 +22,9 @@ private:
 public:
 //    int virtual pure() = 0;
     static void displayMenu();
-    static int selectOption(int);
+    static void selectOption(int);
+    static void createLock();
+    
 };
 
 #endif /* Menu_hpp */
