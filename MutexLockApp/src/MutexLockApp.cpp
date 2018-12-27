@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include <iostream>
 #include "menu/Menu.hpp"
+#include "stores/mutexLockStore/MutexLockStore.hpp"
 
 class MutexLockApp : public Menu
 {
@@ -22,6 +23,7 @@ public:
             Menu::displayMenu();
             std::cout << "Choose an option: ";
             std::cin >> option;
+            Menu::selectOption(option);
             std::cout << std::endl;
         }
     }

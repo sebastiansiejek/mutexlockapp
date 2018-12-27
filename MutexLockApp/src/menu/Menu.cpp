@@ -16,3 +16,8 @@ void Menu::displayMenu()
         "[0] Exit \n"
     ;
 }
+
+int Menu::selectOption(int option)
+{
+    return this->selectedOption = option;
+}

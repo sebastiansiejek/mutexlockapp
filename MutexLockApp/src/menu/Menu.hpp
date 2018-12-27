@@ -20,6 +20,7 @@ private:
 public:
 //    int virtual pure() = 0;
     static void displayMenu();
+    static int selectOption(int);
 };
 
 #endif /* Menu_hpp */
