@@ -13,6 +13,7 @@
 		E44F851321C82B7700CE67A6 /* mutexLock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44F851121C82B7700CE67A6 /* mutexLock.cpp */; };
 		E44F851821C82DEF00CE67A6 /* Menu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44F851621C82DEF00CE67A6 /* Menu.cpp */; };
 		E4607F8221D4D87500CF7DCF /* MutexLockStore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4607F8021D4D87500CF7DCF /* MutexLockStore.cpp */; };
+		E4607F8421D4DA6900CF7DCF /* MutexLockApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4607F8321D4DA6900CF7DCF /* MutexLockApp.cpp */; };
 		E4B204BE21D25D020002B871 /* MutexLockFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B204BC21D25D020002B871 /* MutexLockFactory.cpp */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		E44F851721C82DEF00CE67A6 /* Menu.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Menu.hpp; sourceTree = "<group>"; };
 		E4607F8021D4D87500CF7DCF /* MutexLockStore.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MutexLockStore.cpp; sourceTree = "<group>"; };
 		E4607F8121D4D87500CF7DCF /* MutexLockStore.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MutexLockStore.hpp; sourceTree = "<group>"; };
+		E4607F8321D4DA6900CF7DCF /* MutexLockApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MutexLockApp.cpp; sourceTree = "<group>"; };
 		E4B204BC21D25D020002B871 /* MutexLockFactory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MutexLockFactory.cpp; sourceTree = "<group>"; };
 		E4B204BD21D25D020002B871 /* MutexLockFactory.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MutexLockFactory.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +90,7 @@
 				E44F851421C82DB900CE67A6 /* menu */,
 				E44F851021C82B3900CE67A6 /* mutexLock */,
 				E400A81D21BEED5900308820 /* main.cpp */,
+				E4607F8321D4DA6900CF7DCF /* MutexLockApp.cpp */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				E44F851321C82B7700CE67A6 /* mutexLock.cpp in Sources */,
 				E44F850F21C8286400CE67A6 /* Thread.cpp in Sources */,
 				E4B204BE21D25D020002B871 /* MutexLockFactory.cpp in Sources */,
+				E4607F8421D4DA6900CF7DCF /* MutexLockApp.cpp in Sources */,
 				E44F851821C82DEF00CE67A6 /* Menu.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,7 +7,7 @@
 //
 
 #include "./factories/MutexLockFactory/MutexLockFactory.hpp"
-#include "./mutexLock/mutexLock.hpp"
+#include "./MutexLockApp.cpp"
 #include <vector>
 #include <iostream>
 
@@ -15,6 +15,7 @@ int main(int argc, const char * argv[]) {
     
 //    Thread * thread = MutexLockFactory::createThread();
 //    Lock * lock = MutexLockFactory::createLock();
+    new MutexLockApp();
     
     return 0;
 
