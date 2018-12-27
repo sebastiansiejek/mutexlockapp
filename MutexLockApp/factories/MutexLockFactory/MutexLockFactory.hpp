@@ -10,8 +10,8 @@
 #define factoryMutexLock_hpp
 
 #include <stdio.h>
-#include "../../src/thread/Thread.hpp"
-#include "../../src/lock/Lock.hpp"
+#include "../../src/mutexLock/thread/Thread.hpp"
+#include "../../src/mutexLock/lock/Lock.hpp"
 #include "../../src/mutexLock/mutexLock.hpp"
 
 class MutexLockFactory

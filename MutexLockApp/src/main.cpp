@@ -6,8 +6,8 @@
 //  Copyright © 2018 Sebastian Siejek. All rights reserved.
 //
 
-#include "menu/Menu.hpp"
 #include "./../factories/MutexLockFactory/MutexLockFactory.hpp"
+#include "./mutexLock/mutexLock.hpp"
 #include <vector>
 #include <iostream>
 

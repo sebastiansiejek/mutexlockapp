@@ -82,8 +82,6 @@
 			isa = PBXGroup;
 			children = (
 				E44F851421C82DB900CE67A6 /* menu */,
-				E44F850C21C8282C00CE67A6 /* thread */,
-				E400A82621BEF13800308820 /* lock */,
 				E44F851021C82B3900CE67A6 /* mutexLock */,
 				E400A81D21BEED5900308820 /* main.cpp */,
 			);
@@ -111,6 +109,8 @@
 		E44F851021C82B3900CE67A6 /* mutexLock */ = {
 			isa = PBXGroup;
 			children = (
+				E44F850C21C8282C00CE67A6 /* thread */,
+				E400A82621BEF13800308820 /* lock */,
 				E44F851121C82B7700CE67A6 /* mutexLock.cpp */,
 				E44F851221C82B7700CE67A6 /* mutexLock.hpp */,
 			);

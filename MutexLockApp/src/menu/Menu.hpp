@@ -12,8 +12,8 @@
 #include <stdio.h>
 #include <iostream>
 #include <vector>
-#include "../lock/Lock.hpp"
-#include "../thread/Thread.hpp"
+#include "../mutexLock/lock/Lock.hpp"
+#include "../mutexLock/thread/Thread.hpp"
 
 struct test{
     std::vector<Lock*> locksVec;

@@ -12,7 +12,7 @@
 #include <stdio.h>
 #include <string>
 #include "Thread.hpp"
-#include "../mutexLock/mutexLock.hpp"
+#include "../../mutexLock/mutexLock.hpp"
 
 class Thread : public MutexLock
 {

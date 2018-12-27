@@ -9,7 +9,7 @@
 #ifndef lock_hpp
 #define lock_hpp
 
-#include "../mutexLock/mutexLock.hpp"
+#include "../mutexLock.hpp"
 #include <stdio.h>
 #include <string>
 #include <iostream>

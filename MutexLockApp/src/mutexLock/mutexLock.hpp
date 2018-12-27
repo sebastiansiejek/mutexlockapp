@@ -16,7 +16,6 @@
 class MutexLock
 {
 public:
-    virtual int pure();
     virtual std::string getName();
 };
 
