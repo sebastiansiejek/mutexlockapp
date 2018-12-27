@@ -18,8 +18,8 @@ class Menu
 private:
     int selectedOption;
 public:
-    int virtual pure() = 0;
-    void displayMenu();
+//    int virtual pure() = 0;
+    static void displayMenu();
 };
 
 #endif /* Menu_hpp */

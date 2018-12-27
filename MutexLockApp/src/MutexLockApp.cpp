@@ -8,12 +8,21 @@
 
 #include <stdio.h>
 #include <iostream>
+#include "menu/Menu.hpp"
 
-class MutexLockApp
+class MutexLockApp : public Menu
 {
 public:
     MutexLockApp()
     {
-        std::cout << "Test";
+        int option = 1;
+
+        while(option != 0)
+        {
+            Menu::displayMenu();
+            std::cout << "Choose an option: ";
+            std::cin >> option;
+            std::cout << std::endl;
+        }
     }
 };
