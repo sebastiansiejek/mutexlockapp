@@ -17,12 +17,11 @@ void Menu::displayMenu()
     ;
 }
 
-void Menu::selectOption(int option)
+void Menu::selectOption(int option, MutexLockStore* store)
 {
     switch (option) {
         case 1:
-            MutexLockFactory::createThread();
-            break;
+            MutexLockStore::addLockToStore(MutexLockFactory::createLock(), store);
         default:
             break;
     }

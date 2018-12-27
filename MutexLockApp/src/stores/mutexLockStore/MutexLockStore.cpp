@@ -7,3 +7,8 @@
 //
 
 #include "MutexLockStore.hpp"
+
+void MutexLockStore::addLockToStore(Lock* lock, MutexLockStore* store)
+{
+    store->lockStore.push_back(*lock);
+}

@@ -16,6 +16,7 @@ class MutexLockApp : public Menu
 public:
     MutexLockApp()
     {
+        MutexLockStore *store = new MutexLockStore;
         int option = 1;
 
         while(option != 0)
@@ -23,7 +24,10 @@ public:
             Menu::displayMenu();
             std::cout << "Choose an option: ";
             std::cin >> option;
-            Menu::selectOption(option);
+            Menu::selectOption(option, store);
+            std::cout << std::endl;
+            std::cout << "Lock store size: ";
+            std::cout << store->lockStore.size();
             std::cout << std::endl;
         }
     }

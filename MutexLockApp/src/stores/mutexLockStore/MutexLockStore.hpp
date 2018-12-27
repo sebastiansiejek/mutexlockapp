@@ -11,12 +11,15 @@
 
 #include <stdio.h>
 #include <vector>
+#include "../../factories/MutexLockFactory/MutexLockFactory.hpp"
 #include "../../mutexLock/lock/Lock.hpp"
 #include "../../mutexLock/thread/Thread.hpp"
+#include "../../stores/mutexLockStore/MutexLockStore.hpp"
 
 class MutexLockStore
 {
 public:
+    static void addLockToStore(Lock*, MutexLockStore*);
     std::vector<Lock> lockStore;
     std::vector<Thread> threadStore;
 };
