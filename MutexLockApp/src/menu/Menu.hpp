@@ -12,19 +12,13 @@
 #include <stdio.h>
 #include <iostream>
 #include <vector>
-#include "../mutexLock/lock/Lock.hpp"
-#include "../mutexLock/thread/Thread.hpp"
 
-struct test{
-    std::vector<Lock*> locksVec;
-};
 class Menu
 {
 private:
     int selectedOption;
-    std::vector<Lock*> locksVec;
 public:
-//    int virtual pure() = 0;
+    int virtual pure() = 0;
     void displayMenu();
 };
 
