@@ -16,7 +16,7 @@
 #include "./../factories/MutexLockFactory/MutexLockFactory.hpp"
 #include "./../stores/mutexLockStore/MutexLockStore.hpp"
 
-class Menu : public LockMenu
+class Menu
 {
 private:
     static std::list<std::string> menuOptions;
