@@ -133,7 +133,7 @@
 		E44F851421C82DB900CE67A6 /* menu */ = {
 			isa = PBXGroup;
 			children = (
-				E4607F8A21D66AE400CF7DCF /* theadMenu */,
+				E4607F8A21D66AE400CF7DCF /* threadMenu */,
 				E4607F8621D6363A00CF7DCF /* lockMenu */,
 				E44F851621C82DEF00CE67A6 /* Menu.cpp */,
 				E44F851721C82DEF00CE67A6 /* Menu.hpp */,
@@ -175,13 +175,13 @@
 			path = lockMenu;
 			sourceTree = "<group>";
 		};
-		E4607F8A21D66AE400CF7DCF /* theadMenu */ = {
+		E4607F8A21D66AE400CF7DCF /* threadMenu */ = {
 			isa = PBXGroup;
 			children = (
 				E4607F8B21D66AF100CF7DCF /* ThreadMenu.cpp */,
 				E4607F8C21D66AF100CF7DCF /* ThreadMenu.hpp */,
 			);
-			path = theadMenu;
+			path = threadMenu;
 			sourceTree = "<group>";
 		};
 		E4B204BB21D25CE80002B871 /* MutexLockFactory */ = {

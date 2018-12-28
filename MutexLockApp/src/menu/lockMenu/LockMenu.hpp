@@ -10,10 +10,13 @@
 #define LockMenu_hpp
 
 #include <stdio.h>
+#include <list>
 #include "../../stores/mutexLockStore/MutexLockStore.hpp"
 
 class LockMenu
 {
+private:
+    static std::list<std::string> menuOptions;
 public:
     static void menu();
     static void options(int, MutexLockStore*);

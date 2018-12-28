@@ -8,12 +8,19 @@
 
 #include "LockMenu.hpp"
 
+std::list<std::string> LockMenu::menuOptions = {
+    "Create lock", "Display locks"
+};
+
 void LockMenu::menu()
 {
-    std::cout <<
-    "[1] Create Lock \n"
-    "[2] Display locks \n"
-    ;
+    int i = 0;
+    for (auto const& opt : LockMenu::menuOptions) {
+        i++;
+        std::cout << "[" << i << "]" << " " << opt << std::endl;
+    }
+    
+    std::cout << "[0] Exit\n";
 }
 
 void LockMenu::options(int option, MutexLockStore* store)

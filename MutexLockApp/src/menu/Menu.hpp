@@ -19,10 +19,8 @@
 class Menu : public LockMenu
 {
 private:
-    int selectedOption;
     static std::list<std::string> menuOptions;
 public:
-//    int virtual pure() = 0;
     static void displayMenu();
     static void selectOption(int, MutexLockStore*);
 };
