@@ -19,9 +19,9 @@ void Menu::displayMenu()
 
 void Menu::selectOption(int option, MutexLockStore* store)
 {
-    LockMenu::menu();
     switch (option) {
         case 1:
+            LockMenu::menu();
             std::cout << "Select option: ";
             std::cin >> option;
             LockMenu::options(option, store);

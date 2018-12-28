@@ -23,7 +23,6 @@ private:
 public:
 //    int virtual pure() = 0;
     static void displayMenu();
-    static void lockMenu();
     static void selectOption(int, MutexLockStore*);
 };
 
