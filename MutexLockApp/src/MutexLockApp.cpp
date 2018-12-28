@@ -24,7 +24,7 @@ public:
         while(option != 0)
         {
             Menu::displayMenu();
-            std::cout << "Choose an option: ";
+            std::cout << "Chosen an option: ";
             std::cin >> option;
             Menu::selectOption(option, store);
             std::cout << std::endl;
