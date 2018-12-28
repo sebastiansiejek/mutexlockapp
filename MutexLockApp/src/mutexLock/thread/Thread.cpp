@@ -17,3 +17,8 @@ std::string Thread::getName()
 {
     return this->_name;
 }
+
+void Thread::threadTest()
+{
+    
+}

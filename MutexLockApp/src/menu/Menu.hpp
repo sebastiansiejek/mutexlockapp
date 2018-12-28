@@ -22,9 +22,9 @@ private:
 public:
 //    int virtual pure() = 0;
     static void displayMenu();
+    static void lockMenu();
+    static void lockMenuOptions(int, MutexLockStore*);
     static void selectOption(int, MutexLockStore*);
-    static void createLock();
-    
 };
 
 #endif /* Menu_hpp */
