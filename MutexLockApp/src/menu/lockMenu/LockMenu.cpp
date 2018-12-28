@@ -8,8 +8,6 @@
 
 #include "LockMenu.hpp"
 
-
-
 void LockMenu::menu()
 {
     std::cout <<
