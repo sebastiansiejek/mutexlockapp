@@ -8,13 +8,19 @@
 
 #include "Menu.hpp"
 
+std::list<std::string> Menu::menuOptions = {
+    "Lock", "Thread"
+};
+
 void Menu::displayMenu()
 {
-    std::cout <<
-        "[1] Lock \n"
-        "[2] Thread \n"
-        "[0] Exit \n"
-    ;
+    int i = 0;
+    for (auto const& opt : Menu::menuOptions) {
+        i++;
+        std::cout << "[" << i << "]" << " " << opt << std::endl;
+    }
+    
+    std::cout << "[0] Exit\n";
 }
 
 void Menu::selectOption(int option, MutexLockStore* store)

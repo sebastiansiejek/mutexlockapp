@@ -11,7 +11,7 @@
 
 #include <stdio.h>
 #include <iostream>
-#include <vector>
+#include <list>
 #include "./lockMenu/LockMenu.hpp"
 #include "./../factories/MutexLockFactory/MutexLockFactory.hpp"
 #include "./../stores/mutexLockStore/MutexLockStore.hpp"
@@ -20,6 +20,7 @@ class Menu : public LockMenu
 {
 private:
     int selectedOption;
+    static std::list<std::string> menuOptions;
 public:
 //    int virtual pure() = 0;
     static void displayMenu();
