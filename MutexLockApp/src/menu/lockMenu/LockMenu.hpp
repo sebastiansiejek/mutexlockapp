@@ -10,11 +10,13 @@
 #define LockMenu_hpp
 
 #include <stdio.h>
-#include "../Menu.hpp"
+#include "../../stores/mutexLockStore/MutexLockStore.hpp"
 
-class LockMenu : public Menu
+class LockMenu
 {
-    
+public:
+    static void menu();
+    static void options(int, MutexLockStore*);
 };
 
 #endif /* LockMenu_hpp */

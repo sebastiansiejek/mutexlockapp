@@ -17,39 +17,14 @@ void Menu::displayMenu()
     ;
 }
 
-void Menu::lockMenu()
-{
-    std::cout <<
-        "[1] Create Lock \n"
-        "[2] Display locks \n"
-    ;
-}
-
-void Menu::lockMenuOptions(int option, MutexLockStore* store)
-{
-    switch (option) {
-        case 1:
-            MutexLockStore::addLockToStore(MutexLockFactory::createLock(), store);
-            break;
-        case 2:
-            std::cout << "Locks: \n";
-            for (int i=0; i<=store->lockStore.size() - 1; i++) {
-                std::cout << i+1 << ". " << store->lockStore[i].getName() << std::endl;
-            }
-            break;
-        default:
-            break;
-    }
-}
-
 void Menu::selectOption(int option, MutexLockStore* store)
 {
+    LockMenu::menu();
     switch (option) {
         case 1:
-            Menu::lockMenu();
             std::cout << "Select option: ";
             std::cin >> option;
-            Menu::lockMenuOptions(option, store);
+            LockMenu::options(option, store);
             break;
         default:
             break;
