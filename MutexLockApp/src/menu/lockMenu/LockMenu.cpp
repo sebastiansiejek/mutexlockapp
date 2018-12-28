@@ -26,7 +26,7 @@ void LockMenu::options(int option, MutexLockStore* store)
             break;
         case 2:
             std::cout << "Locks: \n";
-            for (int i=0; i<=store->lockStore.size() - 1; i++) {
+            for (int i = 0; i <= store->lockStore.size() - 1; i++) {
                 std::cout << i+1 << ". " << store->lockStore[i].getName() << std::endl;
             }
             break;
