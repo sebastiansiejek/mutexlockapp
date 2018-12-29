@@ -18,8 +18,8 @@ class MutexLockFactory
 {
 public:
     virtual int pure() = 0;
-    static class Thread * createThread();
-    static class Lock * createLock();
+    static class Thread * createThread(std::string);
+    static class Lock * createLock(std::string);
 };
 
 #endif /* factoryMutexLock_hpp */

@@ -8,12 +8,12 @@
 
 #include "MutexLockFactory.hpp"
 
-Lock * MutexLockFactory::createLock()
+Lock * MutexLockFactory::createLock(std::string name)
 {
-    return new class Lock("test");
+    return new class Lock(name);
 }
 
-Thread * MutexLockFactory::createThread()
+Thread * MutexLockFactory::createThread(std::string name)
 {
-    return new class Thread("test");
+    return new class Thread(name);
 }

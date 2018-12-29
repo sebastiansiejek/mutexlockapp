@@ -20,6 +20,7 @@ private:
 public:
     static void menu();
     static void options(int, MutexLockStore*);
+    static void createLock(MutexLockStore*);
 };
 
 #endif /* LockMenu_hpp */

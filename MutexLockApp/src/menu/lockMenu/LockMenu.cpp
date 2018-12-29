@@ -23,11 +23,19 @@ void LockMenu::menu()
     std::cout << "[0] Exit\n";
 }
 
+void LockMenu::createLock(MutexLockStore* store)
+{
+    std::string lockName;
+    std::cout << "Enter lock name: ";
+    std::cin >> lockName;
+    MutexLockStore::addLockToStore(MutexLockFactory::createLock(lockName), store);
+}
+
 void LockMenu::options(int option, MutexLockStore* store)
 {
     switch (option) {
         case 1:
-            MutexLockStore::addLockToStore(MutexLockFactory::createLock(), store);
+            LockMenu::createLock(store);
             break;
         case 2:
             std::cout << "Locks: \n";
