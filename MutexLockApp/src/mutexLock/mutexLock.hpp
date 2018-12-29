@@ -16,7 +16,7 @@
 class MutexLock
 {
 public:
-    virtual std::string getName();
+    virtual std::string getName() = 0;
 };
 
 #endif /* mutexLock_hpp */

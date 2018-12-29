@@ -7,8 +7,3 @@
 //
 
 #include "mutexLock.hpp"
-
-std::string MutexLock::getName()
-{
-    return "test";
-}
