@@ -13,15 +13,14 @@
 #include <list>
 #include "../../stores/mutexLockStore/MutexLockStore.hpp"
 
-class ThreadMenu
+class ThreadMenu : public MutexLockStore
 {
-private:
+private:private:
     static std::list<std::string> menuOptions;
 public:
     static void menu();
     static void options(int, MutexLockStore*);
-    static void create(MutexLockStore*);
-    static void displayAll(MutexLockStore*);
+    static Thread* add();
 };
 
 #endif /* ThreadMenu_hpp */

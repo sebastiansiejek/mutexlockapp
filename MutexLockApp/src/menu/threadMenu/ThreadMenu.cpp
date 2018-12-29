@@ -9,7 +9,7 @@
 #include "ThreadMenu.hpp"
 
 std::list<std::string> ThreadMenu::menuOptions = {
-    "Create thread", "Display threads"
+    "Create thread", "Select thread", "Display threads"
 };
 
 void ThreadMenu::menu()
@@ -23,30 +23,26 @@ void ThreadMenu::menu()
     std::cout << "[0] Exit\n";
 }
 
-void ThreadMenu::create(MutexLockStore* store)
+
+Thread* ThreadMenu::add()
 {
     std::string lockName;
     std::cout << "Enter thread name: ";
     std::cin >> lockName;
-    MutexLockStore::addThreadToStore(MutexLockFactory::createThread(lockName), store);
-}
-
-void ThreadMenu::displayAll(MutexLockStore* store)
-{
-    std::cout << "Threads: \n";
-    for (int i = 0; i <= store->threadStore.size() - 1; i++) {
-        std::cout << i+1 << ". " << store->threadStore[i].getName() << std::endl;
-    }
+    return MutexLockFactory::createThread(lockName);
 }
 
 void ThreadMenu::options(int option, MutexLockStore* store)
 {
     switch (option) {
         case 1:
-            ThreadMenu::create(store);
+            store->add(ThreadMenu::add());
             break;
         case 2:
-            ThreadMenu::displayAll(store);
+//            ThreadMenu::select(store);
+            break;
+        case 3:
+            store->display();
             break;
         default:
             break;

@@ -12,7 +12,6 @@
 #include <stdio.h>
 #include "../../mutexLock/thread/Thread.hpp"
 #include "../../mutexLock/lock/Lock.hpp"
-#include "../../mutexLock/mutexLock.hpp"
 
 class MutexLockFactory
 {
