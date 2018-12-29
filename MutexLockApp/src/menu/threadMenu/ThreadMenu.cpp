@@ -34,13 +34,30 @@ Thread* ThreadMenu::addToStore()
 
 void ThreadMenu::addToLock(MutexLockStore* threadStore, MutexLockStore* lockStore)
 {
-    int threadIndex = 0;
-    threadStore->display();
-    std::cout << "Select thread: ";
-    std::cin >> threadIndex;
-    std::cout << "Select lock: ";
-    lockStore->display();
-    
+    if (threadStore->isEmpty()) {
+        std::cout << "Thread store is empty\n";
+        return;
+    } else if (lockStore->isEmpty()) {
+        std::cout << "Lock store is empty\n";
+        return;
+    } else {
+        int threadIndex = 0;
+        threadStore->display();
+        std::cout << "Select thread: ";
+        std::cin >> threadIndex;
+        threadIndex = threadIndex > 0 ? threadIndex - 1 : 0;
+        
+        int lockIndex = 0;
+        lockStore->display();
+        std::cout << "Select lock: ";
+        std::cin >> lockIndex;
+        lockIndex = lockIndex > 0 ? lockIndex - 1 : 0;
+       
+        LockStore *lock = dynamic_cast<LockStore*>(lockStore);
+        ThreadStore *thread = dynamic_cast<ThreadStore*>(threadStore);
+        lock->getStore()[lockIndex]->getThreadsInLock().push_back(thread->getStore()[threadIndex]);
+        
+    }
 }
 
 void ThreadMenu::options(int option, MutexLockStore* threadStore, MutexLockStore* lockStore)

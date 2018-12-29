@@ -19,6 +19,8 @@ private:
 public:
     void display() override;
     void add(Lock*) override;
+    bool isEmpty() override;
+    std::vector<Lock*> const getStore();
 };
 
 #endif /* LockStore_hpp */

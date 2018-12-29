@@ -24,6 +24,7 @@ private:
 public:
     Lock(std::string);
     std::string getName() override;
+    std::vector<Thread*> getThreadsInLock();
 };
 
 #endif /* lock_hpp */

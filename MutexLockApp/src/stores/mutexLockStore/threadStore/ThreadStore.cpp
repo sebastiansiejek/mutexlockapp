@@ -32,3 +32,9 @@ bool ThreadStore::isEmpty()
     else
         return true;
 }
+
+std::vector<Thread*> const ThreadStore::getStore()
+{
+    return this->store;
+}
+

@@ -19,3 +19,8 @@ std::string Lock::getName()
 {
     return this->_name;
 }
+
+std::vector<Thread*> Lock::getThreadsInLock()
+{
+    return this->threadsInLock;
+}

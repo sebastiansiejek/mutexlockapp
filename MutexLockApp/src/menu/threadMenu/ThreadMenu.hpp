@@ -12,6 +12,8 @@
 #include <stdio.h>
 #include <list>
 #include "../../stores/mutexLockStore/MutexLockStore.hpp"
+#include "../../stores/mutexLockStore/lockStore/LockStore.hpp"
+#include "../../stores/mutexLockStore/threadStore/ThreadStore.hpp"
 
 class ThreadMenu : public MutexLockStore
 {

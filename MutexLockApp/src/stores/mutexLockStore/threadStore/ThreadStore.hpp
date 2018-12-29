@@ -20,6 +20,7 @@ public:
     void display() override;
     void add(Thread*) override;
     bool isEmpty() override;
+    std::vector<Thread*> const getStore();
 };
 
 #endif /* ThreadStore_hpp */
