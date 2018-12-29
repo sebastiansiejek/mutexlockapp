@@ -21,7 +21,6 @@ private:
 public:
     Thread(std::string);
     std::string getName() override;
-    void threadTest();
 };
 
 #endif /* Thread_hpp */
