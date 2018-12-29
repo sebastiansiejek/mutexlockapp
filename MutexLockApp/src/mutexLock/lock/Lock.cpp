@@ -11,6 +11,7 @@
 Lock::Lock(std::string name)
 {
     this->_name = name;
+    
     std::cout << "Lock " << name << " was created.\n";
 }
 

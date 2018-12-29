@@ -18,6 +18,7 @@ class Lock : public MutexLock
 {
 private:
     std::string _name;
+    std::string _clossingThread;
 public:
     Lock(std::string);
     std::string getName() override;
