@@ -23,20 +23,20 @@ void Menu::displayMenu()
     std::cout << "[0] Exit\n";
 }
 
-void Menu::selectOption(int option, MutexLockStore* store)
+void Menu::selectOption(int option, MutexLockStore* threadStore, MutexLockStore* lockStore)
 {
     switch (option) {
         case 1:
             LockMenu::menu();
             std::cout << "Select option: ";
             std::cin >> option;
-            LockMenu::options(option, store);
+            LockMenu::options(option, lockStore);
             break;
         case 2:
             ThreadMenu::menu();
             std::cout << "Select option: ";
             std::cin >> option;
-            ThreadMenu::options(option, store);
+            ThreadMenu::options(option, threadStore, lockStore);
         default:
             break;
     }

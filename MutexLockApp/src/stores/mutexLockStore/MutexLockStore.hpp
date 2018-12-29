@@ -21,6 +21,7 @@ public:
     virtual void display() {};
     virtual void add(Lock*) {};
     virtual void add(Thread*) {};
+    virtual bool isEmpty();
 };
 
 #endif /* MutexLockStore_hpp */

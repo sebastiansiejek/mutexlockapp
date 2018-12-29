@@ -24,3 +24,11 @@ void ThreadStore::add(Thread* thread)
 {
     this->store.push_back(thread);
 }
+
+bool ThreadStore::isEmpty()
+{
+    if (this->store.size() > 0)
+        return false;
+    else
+        return true;
+}

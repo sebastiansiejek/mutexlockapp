@@ -7,3 +7,8 @@
 //
 
 #include "MutexLockStore.hpp"
+
+bool MutexLockStore::isEmpty()
+{
+    return true;
+}

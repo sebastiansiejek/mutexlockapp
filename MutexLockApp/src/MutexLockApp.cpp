@@ -28,12 +28,7 @@ public:
             Menu::displayMenu();
             std::cout << "Select option: ";
             std::cin >> option;
-            if(option == 1) {
-                Menu::selectOption(option, lockStore);
-            }
-            if(option == 2) {
-                Menu::selectOption(option, threadStore);
-            }
+            Menu::selectOption(option, threadStore, lockStore);
            
             std::cout << std::endl;
         }

@@ -19,8 +19,9 @@ private:private:
     static std::list<std::string> menuOptions;
 public:
     static void menu();
-    static void options(int, MutexLockStore*);
-    static Thread* add();
+    static void options(int, MutexLockStore*, MutexLockStore*);
+    static Thread* addToStore();
+    static void addToLock(MutexLockStore*, MutexLockStore*);
 };
 
 #endif /* ThreadMenu_hpp */

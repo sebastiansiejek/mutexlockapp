@@ -19,6 +19,7 @@ private:
 public:
     void display() override;
     void add(Thread*) override;
+    bool isEmpty() override;
 };
 
 #endif /* ThreadStore_hpp */

@@ -10,15 +10,17 @@
 #define lock_hpp
 
 #include "../mutexLock.hpp"
+#include "../thread/Thread.hpp"
 #include <stdio.h>
 #include <string>
 #include <iostream>
+#include <vector>
 
 class Lock : public MutexLock
 {
 private:
     std::string _name;
-    std::string _clossingThread;
+    std::vector<Thread*> threadsInLock;
 public:
     Lock(std::string);
     std::string getName() override;
