@@ -10,7 +10,18 @@
 #define ThreadMenu_hpp
 
 #include <stdio.h>
+#include <list>
+#include "../../stores/mutexLockStore/MutexLockStore.hpp"
 
-
+class ThreadMenu
+{
+private:
+    static std::list<std::string> menuOptions;
+public:
+    static void menu();
+    static void options(int, MutexLockStore*);
+    static void create(MutexLockStore*);
+    static void displayAll(MutexLockStore*);
+};
 
 #endif /* ThreadMenu_hpp */

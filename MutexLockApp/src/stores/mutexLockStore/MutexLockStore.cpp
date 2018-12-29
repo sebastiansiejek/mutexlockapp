@@ -12,3 +12,8 @@ void MutexLockStore::addLockToStore(Lock* lock, MutexLockStore* store)
 {
     store->lockStore.push_back(*lock);
 }
+
+void MutexLockStore::addThreadToStore(Thread* thread, MutexLockStore* store)
+{
+    store->threadStore.push_back(*thread);
+}

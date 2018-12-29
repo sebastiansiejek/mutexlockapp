@@ -33,6 +33,10 @@ void Menu::selectOption(int option, MutexLockStore* store)
             LockMenu::options(option, store);
             break;
         default:
+            ThreadMenu::menu();
+            std::cout << "Select option: ";
+            std::cin >> option;
+            ThreadMenu::options(option, store);
             break;
     }
 }

@@ -20,6 +20,7 @@ class MutexLockStore
 {
 public:
     static void addLockToStore(Lock*, MutexLockStore*);
+    static void addThreadToStore(Thread*, MutexLockStore*);
     std::vector<Lock> lockStore;
     std::vector<Thread> threadStore;
 };

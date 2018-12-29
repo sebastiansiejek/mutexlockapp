@@ -13,6 +13,7 @@
 #include <iostream>
 #include <list>
 #include "./lockMenu/LockMenu.hpp"
+#include "./threadMenu/ThreadMenu.hpp"
 #include "./../factories/MutexLockFactory/MutexLockFactory.hpp"
 #include "./../stores/mutexLockStore/MutexLockStore.hpp"
 
