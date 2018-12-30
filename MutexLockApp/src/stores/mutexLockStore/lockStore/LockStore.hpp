@@ -21,6 +21,7 @@ public:
     void add(Lock*) override;
     bool isEmpty() override;
     std::vector<Lock*> const getStore();
+    Lock* find(int);
 };
 
 #endif /* LockStore_hpp */

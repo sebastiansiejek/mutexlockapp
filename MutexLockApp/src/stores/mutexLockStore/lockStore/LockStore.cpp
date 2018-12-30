@@ -37,3 +37,13 @@ std::vector<Lock*> const LockStore::getStore()
 {
     return this->store;
 }
+
+Lock* LockStore::find(int menuIndex)
+{
+    for(int i = 0; i <= this->getStore().size() - 1; i++) {
+        if (i - 1 == menuIndex) {
+            return this->getStore()[i];
+        }
+    }
+    return nullptr;
+}

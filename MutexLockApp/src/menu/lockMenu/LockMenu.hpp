@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <list>
 #include "../../stores/mutexLockStore/MutexLockStore.hpp"
+#include "../../stores/mutexLockStore/lockStore/LockStore.hpp"
 
 class LockMenu : public MutexLockStore
 {
@@ -21,6 +22,7 @@ public:
     static void menu();
     static void options(int, MutexLockStore*);
     static Lock* add();
+    static void selectLock();
 };
 
 #endif /* LockMenu_hpp */

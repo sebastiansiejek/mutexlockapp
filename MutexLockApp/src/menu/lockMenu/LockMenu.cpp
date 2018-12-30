@@ -9,7 +9,7 @@
 #include "LockMenu.hpp"
 
 std::list<std::string> LockMenu::menuOptions = {
-    "Create lock", "Display locks"
+    "Create lock", "Display locks", "Select lock"
 };
 
 void LockMenu::menu()
@@ -31,6 +31,11 @@ Lock* LockMenu::add()
     return MutexLockFactory::createLock(lockName);
 }
 
+void LockMenu::selectLock()
+{
+    
+}
+
 void LockMenu::options(int option, MutexLockStore* store)
 {
     switch (option) {
@@ -39,6 +44,9 @@ void LockMenu::options(int option, MutexLockStore* store)
             break;
         case 2:
             store->display();
+            break;
+        case 3:
+            LockMenu::selectLock();
             break;
         default:
             break;

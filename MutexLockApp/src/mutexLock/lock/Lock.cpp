@@ -24,3 +24,10 @@ std::vector<Thread*> Lock::getThreadsInLock()
 {
     return this->threadsInLock;
 }
+
+void Lock::displayThreadsInLock()
+{
+    for (int i = 0; i <= this->getThreadsInLock().size()-1; i++) {
+        std::cout << "[" << i << "]" << this->getThreadsInLock()[i];
+    }
+}
