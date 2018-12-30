@@ -22,7 +22,7 @@ public:
     static void menu();
     static void options(int, MutexLockStore*);
     static Lock* add();
-    static void selectLock();
+    static void selectLock(MutexLockStore*);
 };
 
 #endif /* LockMenu_hpp */

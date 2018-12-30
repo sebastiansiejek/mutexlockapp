@@ -31,9 +31,31 @@ Lock* LockMenu::add()
     return MutexLockFactory::createLock(lockName);
 }
 
-void LockMenu::selectLock()
+void LockMenu::selectLock(MutexLockStore* store)
 {
-    
+    store->display();
+    if (!store->isEmpty()) {
+        int selectedLockIndex = 0;
+        std::cout << "Select lock (index): ";
+        std::cin >> selectedLockIndex;
+        LockStore *lock = dynamic_cast<LockStore*>(store);
+        
+        int option = 0;
+        std::cout <<
+            "You selected lock: " <<
+            lock->find(selectedLockIndex)->getName() <<
+            std::endl <<
+            "[1] Display threads in lock\n";
+        std::cin >> option;
+        switch (option) {
+            case 1:
+                std::cout << "Threads in lock: \n";
+                break;
+                
+            default:
+                break;
+        }
+    }
 }
 
 void LockMenu::options(int option, MutexLockStore* store)
@@ -46,7 +68,7 @@ void LockMenu::options(int option, MutexLockStore* store)
             store->display();
             break;
         case 3:
-            LockMenu::selectLock();
+            LockMenu::selectLock(store);
             break;
         default:
             break;
