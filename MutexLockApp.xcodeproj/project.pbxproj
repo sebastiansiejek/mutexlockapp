@@ -18,6 +18,7 @@
 		E4607F8D21D66AF100CF7DCF /* ThreadMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4607F8B21D66AF100CF7DCF /* ThreadMenu.cpp */; };
 		E4607F9721D7D32300CF7DCF /* LockStore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4607F9521D7D32300CF7DCF /* LockStore.cpp */; };
 		E4607F9B21D7EADC00CF7DCF /* ThreadStore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4607F9921D7EADC00CF7DCF /* ThreadStore.cpp */; };
+		E4607FA821D8FFCA00CF7DCF /* SingleLockMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4607FA621D8FFCA00CF7DCF /* SingleLockMenu.cpp */; };
 		E4B204BE21D25D020002B871 /* MutexLockFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B204BC21D25D020002B871 /* MutexLockFactory.cpp */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,8 @@
 		E4607F9621D7D32300CF7DCF /* LockStore.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LockStore.hpp; sourceTree = "<group>"; };
 		E4607F9921D7EADC00CF7DCF /* ThreadStore.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ThreadStore.cpp; sourceTree = "<group>"; };
 		E4607F9A21D7EADC00CF7DCF /* ThreadStore.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ThreadStore.hpp; sourceTree = "<group>"; };
+		E4607FA621D8FFCA00CF7DCF /* SingleLockMenu.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SingleLockMenu.cpp; sourceTree = "<group>"; };
+		E4607FA721D8FFCA00CF7DCF /* SingleLockMenu.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SingleLockMenu.hpp; sourceTree = "<group>"; };
 		E4B204BC21D25D020002B871 /* MutexLockFactory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MutexLockFactory.cpp; sourceTree = "<group>"; };
 		E4B204BD21D25D020002B871 /* MutexLockFactory.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MutexLockFactory.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -177,6 +180,7 @@
 		E4607F8621D6363A00CF7DCF /* lockMenu */ = {
 			isa = PBXGroup;
 			children = (
+				E4607FA421D8FFAB00CF7DCF /* singleLockMenu */,
 				E4607F8721D637EA00CF7DCF /* LockMenu.cpp */,
 				E4607F8821D637EA00CF7DCF /* LockMenu.hpp */,
 			);
@@ -208,6 +212,15 @@
 				E4607F9A21D7EADC00CF7DCF /* ThreadStore.hpp */,
 			);
 			path = threadStore;
+			sourceTree = "<group>";
+		};
+		E4607FA421D8FFAB00CF7DCF /* singleLockMenu */ = {
+			isa = PBXGroup;
+			children = (
+				E4607FA621D8FFCA00CF7DCF /* SingleLockMenu.cpp */,
+				E4607FA721D8FFCA00CF7DCF /* SingleLockMenu.hpp */,
+			);
+			path = singleLockMenu;
 			sourceTree = "<group>";
 		};
 		E4B204BB21D25CE80002B871 /* MutexLockFactory */ = {
@@ -279,6 +292,7 @@
 				E4607F9B21D7EADC00CF7DCF /* ThreadStore.cpp in Sources */,
 				E4607F8221D4D87500CF7DCF /* MutexLockStore.cpp in Sources */,
 				E4607F8D21D66AF100CF7DCF /* ThreadMenu.cpp in Sources */,
+				E4607FA821D8FFCA00CF7DCF /* SingleLockMenu.cpp in Sources */,
 				E400A82921BEF16100308820 /* Lock.cpp in Sources */,
 				E400A81E21BEED5900308820 /* main.cpp in Sources */,
 				E44F851321C82B7700CE67A6 /* mutexLock.cpp in Sources */,

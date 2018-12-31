@@ -22,6 +22,7 @@ public:
     virtual void add(Lock*) {};
     virtual void add(Thread*) {};
     virtual bool isEmpty();
+    std::vector<Lock*> const getStore();
 };
 
 #endif /* MutexLockStore_hpp */

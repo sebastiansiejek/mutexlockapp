@@ -12,3 +12,9 @@ bool MutexLockStore::isEmpty()
 {
     return true;
 }
+
+std::vector<Lock*> const MutexLockStore::getStore()
+{
+    std::vector<Lock*> lock;
+    return lock;
+}

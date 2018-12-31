@@ -41,15 +41,25 @@ void LockMenu::selectLock(MutexLockStore* store)
         LockStore *lock = dynamic_cast<LockStore*>(store);
         
         int option = 0;
+        Lock* selectedLock = lock->find(selectedLockIndex);
+        
         std::cout <<
             "You selected lock: " <<
-            lock->find(selectedLockIndex)->getName() <<
-            std::endl <<
-            "[1] Display threads in lock\n";
+            selectedLock->getName() <<
+        std::endl;
+        
+        SingleLockMenu::menu();
+        std::cout << "Select option: ";
         std::cin >> option;
         switch (option) {
             case 1:
-                std::cout << "Threads in lock: \n";
+                if(selectedLock->getThreadsInLock().size() > 0) {
+                    std::cout << "Threads in lock: \n";
+                    selectedLock->displayThreadsInLock();
+                } else {
+                    std::cout << "Lock " << selectedLock->getName() << " has NOT threads ";
+                }
+                
                 break;
                 
             default:

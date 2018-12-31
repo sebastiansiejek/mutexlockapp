@@ -38,3 +38,7 @@ std::vector<Thread*> const ThreadStore::getStore()
     return this->store;
 }
 
+Thread* ThreadStore::getThread(int index)
+{
+    return this->store[index];
+}

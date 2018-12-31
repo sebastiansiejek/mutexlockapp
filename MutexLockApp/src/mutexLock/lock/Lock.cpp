@@ -25,9 +25,14 @@ std::vector<Thread*> Lock::getThreadsInLock()
     return this->threadsInLock;
 }
 
+void Lock::pushThreadToLock(Thread* thread)
+{
+    this->threadsInLock.push_back(thread);
+}
+
 void Lock::displayThreadsInLock()
 {
     for (int i = 0; i <= this->getThreadsInLock().size()-1; i++) {
-        std::cout << "[" << i << "]" << this->getThreadsInLock()[i];
+        std::cout << "[" << i << "] " << this->getThreadsInLock()[i]->getName() << std::endl;
     }
 }

@@ -25,6 +25,7 @@ public:
     Lock(std::string);
     std::string getName() override;
     std::vector<Thread*> getThreadsInLock();
+    void pushThreadToLock(Thread*);
     void displayThreadsInLock();
 };
 

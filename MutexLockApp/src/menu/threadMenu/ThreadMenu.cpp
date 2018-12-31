@@ -55,7 +55,10 @@ void ThreadMenu::addToLock(MutexLockStore* threadStore, MutexLockStore* lockStor
        
         LockStore *lock = dynamic_cast<LockStore*>(lockStore);
         ThreadStore *thread = dynamic_cast<ThreadStore*>(threadStore);
-        lock->getStore()[lockIndex]->getThreadsInLock().push_back(thread->getStore()[threadIndex]);
+        
+        
+        lock->addThreadToLock(lockIndex, thread->getThread(threadIndex));
+        lock->displayThreadsInLock(lockIndex);
         
     }
 }

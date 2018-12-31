@@ -47,3 +47,13 @@ Lock* LockStore::find(int menuIndex)
     }
     return nullptr;
 }
+
+void LockStore::addThreadToLock(int lockIndexMenu, Thread* Thread)
+{
+    this->store[lockIndexMenu]->pushThreadToLock(Thread);
+}
+
+void LockStore::displayThreadsInLock(int lockIndexMenu)
+{
+    this->store[lockIndexMenu]->displayThreadsInLock();
+}

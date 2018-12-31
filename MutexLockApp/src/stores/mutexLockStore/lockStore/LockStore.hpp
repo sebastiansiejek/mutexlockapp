@@ -21,6 +21,8 @@ public:
     void add(Lock*) override;
     bool isEmpty() override;
     std::vector<Lock*> const getStore();
+    void addThreadToLock(int, Thread*);
+    void displayThreadsInLock(int);
     Lock* find(int);
 };
 

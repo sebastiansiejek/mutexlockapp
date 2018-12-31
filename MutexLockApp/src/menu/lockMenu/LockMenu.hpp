@@ -13,6 +13,7 @@
 #include <list>
 #include "../../stores/mutexLockStore/MutexLockStore.hpp"
 #include "../../stores/mutexLockStore/lockStore/LockStore.hpp"
+#include "singleLockMenu/SingleLockMenu.hpp"
 
 class LockMenu : public MutexLockStore
 {
