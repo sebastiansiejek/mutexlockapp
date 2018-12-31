@@ -10,8 +10,8 @@
 #define SingleLockMenu_hpp
 
 #include <stdio.h>
-#include <list>
-#include <iostream>
+#include "../LockMenu.hpp"
+#include "../../../mutexLock/lock/Lock.hpp"
 
 class SingleLockMenu
 {
@@ -19,7 +19,7 @@ private:
     static std::list<std::string> menuOptions;
 public:
     static void menu();
-    static void options(int);
+    static void options(int, Lock*);
 };
 
 #endif /* SingleLockMenu_hpp */

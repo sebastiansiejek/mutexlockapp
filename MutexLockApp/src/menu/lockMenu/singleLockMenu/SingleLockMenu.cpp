@@ -22,3 +22,19 @@ void SingleLockMenu::menu()
     
     std::cout << "[0] Exit\n";
 }
+
+void SingleLockMenu::options(int option, Lock* lock)
+{
+    switch (option) {
+        case 1:
+            if(lock->getThreadsInLock().size() > 0) {
+                std::cout << "Threads in lock: \n";
+                lock->displayThreadsInLock();
+            } else {
+                std::cout << "Lock " << lock->getName() << " has NOT threads ";
+            }
+            break;
+        default:
+            break;
+    }
+}
