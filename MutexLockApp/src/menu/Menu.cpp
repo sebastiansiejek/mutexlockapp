@@ -25,6 +25,10 @@ void Menu::displayMenu()
 
 void Menu::selectOption(int option, MutexLockStore* threadStore, MutexLockStore* lockStore)
 {
+    if (option > Menu::menuOptions.size()) {
+        std::cout << "\nSelect correct option";
+        return;
+    }
     switch (option) {
         case 1:
             LockMenu::menu();
