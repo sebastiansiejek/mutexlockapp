@@ -12,8 +12,8 @@
 #include <stdio.h>
 #include <list>
 #include "../../stores/mutexLockStore/MutexLockStore.hpp"
-#include "../../stores/mutexLockStore/lockStore/LockStore.hpp"
-#include "../../stores/mutexLockStore/threadStore/ThreadStore.hpp"
+#include "../../stores/mutexLockStore/lockStoreStatic/lockStoreStatic.hpp"
+#include "../../stores/mutexLockStore/threadStoreStatic/ThreadStoreStatic.hpp"
 
 class ThreadMenu : public MutexLockStore
 {
@@ -21,9 +21,9 @@ private:private:
     static std::list<std::string> menuOptions;
 public:
     static void menu();
-    static void options(int, MutexLockStore*, MutexLockStore*);
+    static void options(int);
     static Thread* addToStore();
-    static void addToLock(MutexLockStore*, MutexLockStore*);
+    static void addToLock();
 };
 
 #endif /* ThreadMenu_hpp */

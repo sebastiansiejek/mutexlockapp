@@ -65,7 +65,7 @@ void LockMenu::options(int option)
             LockStoreStatic::display();
             break;
         case 3:
-            LockMenu();
+            LockMenu::selectLock();
             break;
         default:
             break;

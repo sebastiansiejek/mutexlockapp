@@ -24,7 +24,7 @@ private:
     static std::list<std::string> menuOptions;
 public:
     static void displayMenu();
-    static void selectOption(int, MutexLockStore*, MutexLockStore*);
+    static void selectOption(int);
 };
 
 #endif /* Menu_hpp */

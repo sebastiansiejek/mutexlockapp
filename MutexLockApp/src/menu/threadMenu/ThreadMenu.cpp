@@ -32,45 +32,45 @@ Thread* ThreadMenu::addToStore()
     return MutexLockFactory::createThread(lockName);
 }
 
-void ThreadMenu::addToLock(MutexLockStore* threadStore, MutexLockStore* lockStore)
+void ThreadMenu::addToLock()
 {
-    if (threadStore->isEmpty()) {
+    if (ThreadStoreStatic::isEmpty()) {
         std::cout << "Thread store is empty\n";
         return;
-    } else if (lockStore->isEmpty()) {
+    } else if (LockStoreStatic::isEmpty()) {
         std::cout << "Lock store is empty\n";
         return;
     } else {
         int threadIndex = 0;
-        threadStore->display();
+        ThreadStoreStatic::display();
         std::cout << "Select thread: ";
         std::cin >> threadIndex;
-        threadIndex = threadIndex > 0 ? threadIndex - 1 : 0;
-        
+
         int lockIndex = 0;
-        lockStore->display();
+        LockStoreStatic::display();
         std::cout << "Select lock: ";
         std::cin >> lockIndex;
-        lockIndex = lockIndex > 0 ? lockIndex - 1 : 0;
-       
-        LockStore *lock = dynamic_cast<LockStore*>(lockStore);
-        ThreadStore *thread = dynamic_cast<ThreadStore*>(threadStore);
+
+        ThreadStoreStatic threadStore;
+        threadStore.find(threadIndex);
+        LockStoreStatic lockStore;
+        lockStore.find(lockIndex)->pushThreadToLock(threadStore.find(threadIndex));
         
-        lock->addThreadToLock(lockIndex, thread->getThread(threadIndex));
+        std::cout << "Thread " << threadStore.find(threadIndex)->getName() << " was added to " << lockStore.find(lockIndex)->getName();
     }
 }
 
-void ThreadMenu::options(int option, MutexLockStore* threadStore, MutexLockStore* lockStore)
+void ThreadMenu::options(int option)
 {
     switch (option) {
         case 1:
-            threadStore->add(ThreadMenu::addToStore());
+            ThreadStoreStatic::add(ThreadMenu::addToStore());
             break;
         case 2:
-            ThreadMenu::addToLock(threadStore, lockStore);
+            ThreadMenu::addToLock();
             break;
         case 3:
-            threadStore->display();
+            ThreadStoreStatic::display();
             break;
         default:
             break;

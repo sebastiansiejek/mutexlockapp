@@ -23,7 +23,7 @@ void Menu::displayMenu()
     std::cout << "[0] Exit\n";
 }
 
-void Menu::selectOption(int option, MutexLockStore* threadStore, MutexLockStore* lockStore)
+void Menu::selectOption(int option)
 {
     if (option > Menu::menuOptions.size()) {
         std::cout << "\nSelect correct option";
@@ -40,7 +40,7 @@ void Menu::selectOption(int option, MutexLockStore* threadStore, MutexLockStore*
             ThreadMenu::menu();
             std::cout << "Select option: ";
             std::cin >> option;
-            ThreadMenu::options(option, threadStore, lockStore);
+            ThreadMenu::options(option);
         default:
             break;
     }

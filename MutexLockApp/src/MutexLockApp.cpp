@@ -20,15 +20,13 @@ public:
     MutexLockApp()
     {
         int option = 1;
-        MutexLockStore *lockStore = new LockStore();
-        MutexLockStore *threadStore = new ThreadStore();
         
         while(option != 0)
         {
             Menu::displayMenu();
             std::cout << "Select option: ";
             std::cin >> option;
-            Menu::selectOption(option, threadStore, lockStore);
+            Menu::selectOption(option);
            
             std::cout << std::endl;
         }
