@@ -22,6 +22,7 @@ private:
 public:
     Thread(std::string);
     std::string getName() override;
+    void closeLock(MutexLock*);
 };
 
 #endif /* Thread_hpp */
