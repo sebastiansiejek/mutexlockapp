@@ -33,6 +33,6 @@ void Lock::pushThreadToLock(Thread* thread)
 void Lock::displayThreadsInLock()
 {
     for (int i = 0; i <= this->getThreadsInLock().size()-1; i++) {
-        std::cout << "[" << i << "] " << this->getThreadsInLock()[i]->getName() << std::endl;
+        std::cout << "[" << i + 1 << "] " << this->getThreadsInLock()[i]->getName() << std::endl;
     }
 }

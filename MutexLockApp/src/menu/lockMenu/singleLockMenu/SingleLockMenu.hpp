@@ -20,6 +20,7 @@ private:
 public:
     static void menu();
     static void options(int, Lock*);
+    static void selectThread(Lock* lock);
 };
 
 #endif /* SingleLockMenu_hpp */

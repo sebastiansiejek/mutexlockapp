@@ -9,7 +9,7 @@
 #include "SingleLockMenu.hpp"
 
 std::list<std::string> SingleLockMenu::menuOptions = {
-    "Display threads in lock"
+    "Display threads in lock", "Select thread"
 };
 
 void SingleLockMenu::menu()
@@ -23,6 +23,15 @@ void SingleLockMenu::menu()
     std::cout << "[0] Exit\n";
 }
 
+void SingleLockMenu::selectThread(Lock* lock)
+{
+    lock->displayThreadsInLock();
+    int option = 0;
+    std::cout << "Select thread: ";
+    std::cin >> option;
+    std::cout << "You selected thread: ";
+}
+
 void SingleLockMenu::options(int option, Lock* lock)
 {
     switch (option) {
@@ -34,6 +43,8 @@ void SingleLockMenu::options(int option, Lock* lock)
                 std::cout << "Lock " << lock->getName() << " has NOT threads ";
             }
             break;
+        case 2:
+            SingleLockMenu::selectThread(lock);
         default:
             break;
     }

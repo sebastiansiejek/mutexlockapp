@@ -10,6 +10,7 @@
 #define ThreadsInLockMenu_hpp
 
 #include <stdio.h>
+#include <iostream>
 #include "../SingleLockMenu.hpp"
 
 class ThreadsInLockMenu

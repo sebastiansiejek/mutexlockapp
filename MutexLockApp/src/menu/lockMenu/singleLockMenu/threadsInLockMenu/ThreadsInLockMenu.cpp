@@ -9,7 +9,7 @@
 #include "ThreadsInLockMenu.hpp"
 
 std::list<std::string> ThreadsInLockMenu::menuOptions = {
-    "Select lock"
+    "Select Thread"
 };
 
 void ThreadsInLockMenu::menu()
@@ -21,4 +21,14 @@ void ThreadsInLockMenu::menu()
     }
     
     std::cout << "[0] Exit\n";
+}
+
+void ThreadsInLockMenu::options(int option)
+{
+    switch (option) {
+        case 1:
+            
+        default:
+            break;
+    }
 }
