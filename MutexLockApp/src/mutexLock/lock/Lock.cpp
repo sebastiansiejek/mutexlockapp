@@ -36,3 +36,11 @@ void Lock::displayThreadsInLock()
         std::cout << "[" << i + 1 << "] " << this->getThreadsInLock()[i]->getName() << std::endl;
     }
 }
+
+Thread* Lock::getThreadFromLock(int menuIndex = 0)
+{
+    if (this->getThreadsInLock().size() > 0)
+        return this->threadsInLock[menuIndex-1];
+    else
+        return nullptr;
+}

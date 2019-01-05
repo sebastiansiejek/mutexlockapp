@@ -31,6 +31,7 @@ public:
     std::vector<Thread*> getThreadsInLock();
     void pushThreadToLock(Thread*);
     void displayThreadsInLock();
+    Thread* getThreadFromLock(int);
 };
 
 #endif /* lock_hpp */

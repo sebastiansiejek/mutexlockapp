@@ -29,7 +29,10 @@ void SingleLockMenu::selectThread(Lock* lock)
     int option = 0;
     std::cout << "Select thread: ";
     std::cin >> option;
+    
+    Thread* thread = lock->getThreadFromLock(option);
     std::cout << "You selected thread: ";
+    std::cout << thread->getName();
 }
 
 void SingleLockMenu::options(int option, Lock* lock)
