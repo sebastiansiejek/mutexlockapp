@@ -34,7 +34,7 @@ void Menu::selectOption(int option, MutexLockStore* threadStore, MutexLockStore*
             LockMenu::menu();
             std::cout << "Select option: ";
             std::cin >> option;
-            LockMenu::options(option, lockStore);
+            LockMenu::options(option);
             break;
         case 2:
             ThreadMenu::menu();

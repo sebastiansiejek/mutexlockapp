@@ -31,17 +31,16 @@ Lock* LockMenu::add()
     return MutexLockFactory::createLock(lockName);
 }
 
-void LockMenu::selectLock(MutexLockStore* store)
+void LockMenu::selectLock()
 {
-    store->display();
-    if (!store->isEmpty()) {
+    LockStoreStatic::display();
+    if (!LockStoreStatic::isEmpty()) {
         int selectedLockIndex = 0;
         std::cout << "Select lock (index): ";
         std::cin >> selectedLockIndex;
-        LockStore *lock = dynamic_cast<LockStore*>(store);
-        
-        int option = 0;
-        Lock* selectedLock = lock->find(selectedLockIndex);
+   
+        LockStoreStatic lockStore;
+        Lock* selectedLock = lockStore.find(selectedLockIndex);
         
         std::cout <<
             "You selected lock: " <<
@@ -49,23 +48,24 @@ void LockMenu::selectLock(MutexLockStore* store)
         std::endl;
         
         SingleLockMenu::menu();
+        int option = 0;
         std::cout << "Select option: ";
         std::cin >> option;
         SingleLockMenu::options(option, selectedLock);
     }
 }
 
-void LockMenu::options(int option, MutexLockStore* store)
+void LockMenu::options(int option)
 {
     switch (option) {
         case 1:
-            store->add(LockMenu::add());
+            LockStoreStatic::add(LockMenu::add());
             break;
         case 2:
-            store->display();
+            LockStoreStatic::display();
             break;
         case 3:
-            LockMenu::selectLock(store);
+            LockMenu();
             break;
         default:
             break;
