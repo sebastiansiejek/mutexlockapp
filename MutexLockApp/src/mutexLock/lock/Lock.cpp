@@ -64,3 +64,12 @@ Thread* Lock::getClosingThread()
 {
     return this->_closed.thread;
 }
+
+bool Lock::threadInLockExist(std::string name)
+{
+    for(auto& e : this->getThreadsInLock()) {
+        if(e->getName() == name)
+            return true;
+    }
+    return false;
+}

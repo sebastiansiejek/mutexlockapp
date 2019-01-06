@@ -35,6 +35,7 @@ public:
     void setCloseLock(Thread*);
     bool isClosed();
     Thread* getClosingThread();
+    bool threadInLockExist(std::string);
 };
 
 #endif /* lock_hpp */
