@@ -73,3 +73,8 @@ bool Lock::isThreadInLockExist(std::string name)
     }
     return false;
 }
+
+void Lock::addThreadToWaiting(Thread* thread)
+{
+    
+}

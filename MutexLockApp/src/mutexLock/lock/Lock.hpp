@@ -21,6 +21,7 @@ class Lock : public MutexLock
 private:
     std::string _name;
     std::vector<Thread*> _threadsInLock;
+    std::vector<Thread*> _waitingThreads;
     struct {
         bool isClosed = false;
         Thread* thread;
@@ -29,13 +30,14 @@ public:
     Lock(std::string);
     std::string getName() override;
     std::vector<Thread*> getThreadsInLock();
+    Thread* getClosingThread();
+    Thread* getThreadFromLock(int);
+    bool isClosed();
+    bool isThreadInLockExist(std::string);
     void pushThreadToLock(Thread*);
     void displayThreadsInLock();
-    Thread* getThreadFromLock(int);
     void setCloseLock(Thread*);
-    bool isClosed();
-    Thread* getClosingThread();
-    bool isThreadInLockExist(std::string);
+    void addThreadToWaiting(Thread*);
 };
 
 #endif /* lock_hpp */
