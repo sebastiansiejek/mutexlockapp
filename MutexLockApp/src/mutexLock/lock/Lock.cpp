@@ -92,3 +92,14 @@ void Lock::pushThreadToWaiting(Thread* thread)
 {
     this->_waitingThreads.push_back(thread);
 }
+
+void Lock::displayThreadsWaitingUnderLock()
+{
+    if(this->getWaitingThreads().size() > 0) {
+        for(unsigned int i=0; i<=this->getWaitingThreads().size() - 1; i++) {
+            std::cout << "[" << i << "] " << this->_threadsInLock[i]->getName() << std::endl;
+        }
+    } else {
+        std::cout << "No thread is waiting under lock";
+    }
+}

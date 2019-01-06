@@ -36,5 +36,5 @@ void ThreadsInLockMenu::options(int option, Thread* thread, Lock* lock)
 void ThreadsInLockMenu::closeLock(Thread* thread, Lock* lock)
 {
     lock->setCloseLock(thread);
-    std::cout << "Lock " << lock->getName() << " was closed";
+    std::cout << "Lock " << lock->getName() << " was closed.";
 }

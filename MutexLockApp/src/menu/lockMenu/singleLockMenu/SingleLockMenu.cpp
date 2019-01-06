@@ -9,7 +9,7 @@
 #include "SingleLockMenu.hpp"
 
 std::list<std::string> SingleLockMenu::menuOptions = {
-    "Display threads in lock", "Select thread", "Display thread that closed lock"
+    "Display threads in lock", "Select thread", "Display thread that closed lock", "Display threads waiting under lock"
 };
 
 void SingleLockMenu::menu()
@@ -62,9 +62,13 @@ void SingleLockMenu::options(int option, Lock* lock)
         case 2:
             SingleLockMenu::selectThread(lock);
             break;
-        default:
         case 3:
             SingleLockMenu::displayClosingThread(lock);
+            break;
+        case 4:
+            lock->displayThreadsWaitingUnderLock();
+            break;
+        default:
             break;
     }
 }
