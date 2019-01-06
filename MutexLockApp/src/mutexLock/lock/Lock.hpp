@@ -20,11 +20,11 @@ class Lock : public MutexLock
 {
 private:
     std::string _name;
-    std::vector<Thread*> threadsInLock;
-    struct isClosed {
+    std::vector<Thread*> _threadsInLock;
+    struct {
         bool isClosed = false;
-        int threadMenuID;
-    };
+        Thread* thread;
+    } _closed;
 public:
     Lock(std::string);
     std::string getName() override;
@@ -32,6 +32,9 @@ public:
     void pushThreadToLock(Thread*);
     void displayThreadsInLock();
     Thread* getThreadFromLock(int);
+    void setCloseLock(Thread*);
+    bool isClosed();
+    Thread* getClosingThread();
 };
 
 #endif /* lock_hpp */

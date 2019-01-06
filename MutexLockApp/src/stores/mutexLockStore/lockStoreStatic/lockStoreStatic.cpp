@@ -38,7 +38,11 @@ void LockStoreStatic::display()
     if(getStoreSize() > 0) {
         std::cout << "Locks:\n";
         for (int i = 0; i <= getStoreSize() - 1; i++) {
-            std::cout << i+1 << ". " << getStore()[i]->getName() << std::endl;
+            std::cout << i+1 << ". " << getStore()[i]->getName();
+            if(getStore()[i]->isClosed())
+                std::cout << " - " << "closed\n";
+            else
+                std::cout << " - " << "open\n";
         }
     } else {
         std::cout << "Lock store is EMPTY\n";

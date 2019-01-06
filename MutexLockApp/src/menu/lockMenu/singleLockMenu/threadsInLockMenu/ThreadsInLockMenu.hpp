@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <iostream>
 #include "../SingleLockMenu.hpp"
+#include "../../../Menu.hpp"
 
 class ThreadsInLockMenu
 {
@@ -19,7 +20,8 @@ private:
     static std::list<std::string> menuOptions;
 public:
     static void menu();
-    static void options(int);
+    static void options(int, Thread*, Lock*);
+    static void closeLock(Thread*, Lock*);
 };
 
 #endif /* ThreadsInLockMenu_hpp */

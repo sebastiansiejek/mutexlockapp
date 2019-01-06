@@ -22,12 +22,12 @@ std::string Lock::getName()
 
 std::vector<Thread*> Lock::getThreadsInLock()
 {
-    return this->threadsInLock;
+    return this->_threadsInLock;
 }
 
 void Lock::pushThreadToLock(Thread* thread)
 {
-    this->threadsInLock.push_back(thread);
+    this->_threadsInLock.push_back(thread);
 }
 
 void Lock::displayThreadsInLock()
@@ -40,7 +40,27 @@ void Lock::displayThreadsInLock()
 Thread* Lock::getThreadFromLock(int menuIndex = 0)
 {
     if (this->getThreadsInLock().size() > 0)
-        return this->threadsInLock[menuIndex-1];
+        return this->_threadsInLock[menuIndex - 1];
     else
         return nullptr;
+}
+
+void Lock::setCloseLock(Thread* thread)
+{
+    this->_closed.isClosed = true;
+    this->_closed.thread = thread;
+}
+
+bool Lock::isClosed()
+{
+    if(this->_closed.isClosed == true)
+        return true;
+    else
+        return false;
+}
+
+
+Thread* Lock::getClosingThread()
+{
+    return this->_closed.thread;
 }

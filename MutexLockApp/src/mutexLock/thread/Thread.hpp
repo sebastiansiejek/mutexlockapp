@@ -13,6 +13,7 @@
 #include <string>
 #include <iostream>
 #include "Thread.hpp"
+//#include "../lock/Lock.hpp"
 #include "../../mutexLock/mutexLock.hpp"
 
 class Thread : public MutexLock
@@ -22,7 +23,6 @@ private:
 public:
     Thread(std::string);
     std::string getName() override;
-    void closeLock(MutexLock*);
 };
 
 #endif /* Thread_hpp */

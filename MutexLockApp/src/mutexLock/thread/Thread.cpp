@@ -17,8 +17,3 @@ std::string Thread::getName()
 {
     return this->_name;
 }
-
-void Thread::closeLock(MutexLock* lock)
-{
-    
-}

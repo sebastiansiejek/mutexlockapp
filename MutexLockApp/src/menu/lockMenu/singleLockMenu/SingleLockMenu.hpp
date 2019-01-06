@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include "../LockMenu.hpp"
 #include "../../../mutexLock/lock/Lock.hpp"
+#include "threadsInLockMenu/ThreadsInLockMenu.hpp"
 
 class SingleLockMenu
 {
@@ -20,7 +21,8 @@ private:
 public:
     static void menu();
     static void options(int, Lock*);
-    static void selectThread(Lock* lock);
+    static void selectThread(Lock*);
+    static void displayClosingThread(Lock*);
 };
 
 #endif /* SingleLockMenu_hpp */
