@@ -58,7 +58,7 @@ void ThreadMenu::addToLock()
         Lock* lock = lockStore.find(lockIndex);
         Thread* thread = threadStore.find(threadIndex);
         
-        if(!lock->threadInLockExist(thread->getName())) {
+        if(!lock->isThreadInLockExist(thread->getName())) {
             lock->pushThreadToLock(threadStore.find(threadIndex));
             std::cout << "Thread " << thread->getName() << " was added to " << lock->getName();
         } else {

@@ -59,7 +59,7 @@ Lock* LockStoreStatic::find(int menuIndex)
     return nullptr;
 }
 
-bool LockStoreStatic::lockNameExist(std::string name)
+bool LockStoreStatic::isLockExist(std::string name)
 {
     if(!isEmpty()) {
         for(auto& e : getStore()) {
