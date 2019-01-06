@@ -25,7 +25,7 @@ private:
 public:
     static void menu();
     static void options(int);
-    static Lock* add();
+    static void add();
     static void selectLock();
 };
 

@@ -55,3 +55,14 @@ Thread* ThreadStoreStatic::find(int menuIndex)
     return nullptr;
 }
 
+bool ThreadStoreStatic::isThreadExist(std::string name)
+{
+    if(!isEmpty()) {
+        for(auto& e : ThreadStoreStatic::getStore()) {
+            if(e->getName() == name) {
+                return true;
+            }
+        }
+    }
+    return false;
+}

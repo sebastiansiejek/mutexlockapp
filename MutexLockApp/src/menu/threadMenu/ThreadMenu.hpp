@@ -22,7 +22,7 @@ private:private:
 public:
     static void menu();
     static void options(int);
-    static Thread* addToStore();
+    static void addToStore();
     static void addToLock();
 };
 

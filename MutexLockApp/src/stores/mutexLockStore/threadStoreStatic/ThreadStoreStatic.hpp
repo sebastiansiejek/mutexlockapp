@@ -24,6 +24,7 @@ public:
     static void add(Thread*);
     static void display();
     Thread* find(int);
+    static bool isThreadExist(std::string);
 };
 
 #endif /* ThreadStoreStatic_hpp */

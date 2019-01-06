@@ -24,12 +24,15 @@ void ThreadMenu::menu()
 }
 
 
-Thread* ThreadMenu::addToStore()
+void ThreadMenu::addToStore()
 {
-    std::string lockName;
+    std::string threadName;
     std::cout << "Enter thread name: ";
-    std::cin >> lockName;
-    return MutexLockFactory::createThread(lockName);
+    std::cin >> threadName;
+    if(ThreadStoreStatic::isThreadExist(threadName))
+        std::cout << "Thread " << threadName << " already exist\n";
+    else
+        return ThreadStoreStatic::add(MutexLockFactory::createThread(threadName));
 }
 
 void ThreadMenu::addToLock()
@@ -72,7 +75,7 @@ void ThreadMenu::options(int option)
 {
     switch (option) {
         case 1:
-            ThreadStoreStatic::add(ThreadMenu::addToStore());
+            ThreadMenu::addToStore();
             break;
         case 2:
             ThreadMenu::addToLock();

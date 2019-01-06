@@ -23,16 +23,16 @@ void LockMenu::menu()
     std::cout << "[0] Exit\n";
 }
 
-Lock* LockMenu::add()
+void LockMenu::add()
 {
     std::string lockName;
     std::cout << "Enter lock name: ";
     std::cin >> lockName;
-    if(LockStoreStatic::lockNameExist(lockName)) {
+    if(LockStoreStatic::isLockExist(lockName)) {
         std::cout << "Lock " << lockName << " already exist\n";
-        return nullptr;
+    } else {
+        LockStoreStatic::add(MutexLockFactory::createLock(lockName));
     }
-    return MutexLockFactory::createLock(lockName);
 }
 
 void LockMenu::selectLock()
@@ -63,7 +63,7 @@ void LockMenu::options(int option)
 {
     switch (option) {
         case 1:
-            LockStoreStatic::add(LockMenu::add());
+            LockMenu::add();
             break;
         case 2:
             LockStoreStatic::display();
