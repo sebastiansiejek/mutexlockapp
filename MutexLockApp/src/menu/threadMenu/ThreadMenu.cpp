@@ -61,13 +61,17 @@ void ThreadMenu::addToLock()
         Lock* lock = lockStore.find(lockIndex);
         Thread* thread = threadStore.find(threadIndex);
         
-        if(!lock->isThreadInLockExist(thread->getName())) {
-            lock->pushThreadToLock(threadStore.find(threadIndex));
-            std::cout << "Thread " << thread->getName() << " was added to " << lock->getName();
+        if(!lock->isClosed()) {
+            if(!lock->isThreadInLockExist(thread->getName())) {
+                lock->pushThreadToLock(threadStore.find(threadIndex));
+                std::cout << "Thread " << thread->getName() << " was added to " << lock->getName();
+            } else {
+                std::cout << "Thread " << thread->getName() << " already exist in " << lock->getName();
+            }
         } else {
-            std::cout << "thread " << thread->getName() << " already exist in " << lock->getName();
+            lock->pushThreadToWaiting(thread);
+            std::cout << "Lock " << lock->getName() << " is closed. " << "Thread " << thread->getName() << " is waitng under lock.";
         }
-        
     }
 }
 

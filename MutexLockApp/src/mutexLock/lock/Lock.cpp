@@ -25,6 +25,11 @@ std::vector<Thread*> Lock::getThreadsInLock()
     return this->_threadsInLock;
 }
 
+std::vector<Thread*> Lock::getWaitingThreads()
+{
+    return this->_waitingThreads;
+}
+
 void Lock::pushThreadToLock(Thread* thread)
 {
     this->_threadsInLock.push_back(thread);
@@ -74,7 +79,16 @@ bool Lock::isThreadInLockExist(std::string name)
     return false;
 }
 
-void Lock::addThreadToWaiting(Thread* thread)
+bool Lock::isThreadInWaitingExist(std::string name)
 {
-    
+    for(auto& e : this->getWaitingThreads()) {
+        if(e->getName() == name)
+            return true;
+    }
+    return false;
+}
+
+void Lock::pushThreadToWaiting(Thread* thread)
+{
+    this->_waitingThreads.push_back(thread);
 }

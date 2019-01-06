@@ -30,14 +30,16 @@ public:
     Lock(std::string);
     std::string getName() override;
     std::vector<Thread*> getThreadsInLock();
+    std::vector<Thread*> getWaitingThreads();
     Thread* getClosingThread();
     Thread* getThreadFromLock(int);
     bool isClosed();
     bool isThreadInLockExist(std::string);
+    bool isThreadInWaitingExist(std::string);
     void pushThreadToLock(Thread*);
     void displayThreadsInLock();
     void setCloseLock(Thread*);
-    void addThreadToWaiting(Thread*);
+    void pushThreadToWaiting(Thread*);
 };
 
 #endif /* lock_hpp */
