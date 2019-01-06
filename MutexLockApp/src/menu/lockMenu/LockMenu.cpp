@@ -28,6 +28,10 @@ Lock* LockMenu::add()
     std::string lockName;
     std::cout << "Enter lock name: ";
     std::cin >> lockName;
+    if(LockStoreStatic::lockNameExist(lockName)) {
+        std::cout << "Lock " << lockName << " already exist\n";
+        return nullptr;
+    }
     return MutexLockFactory::createLock(lockName);
 }
 

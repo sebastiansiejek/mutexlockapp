@@ -22,7 +22,8 @@ public:
     static bool isEmpty();
     static void add(Lock*);
     static void display();
-    Lock* find(int);
+    static Lock* find(int);
+    static bool lockNameExist(std::string);
 };
 
 #endif /* lockStoreStatic_hpp */
