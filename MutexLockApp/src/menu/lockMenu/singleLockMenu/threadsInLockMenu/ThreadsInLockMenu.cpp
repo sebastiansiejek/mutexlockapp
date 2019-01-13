@@ -9,7 +9,7 @@
 #include "ThreadsInLockMenu.hpp"
 
 std::list<std::string> ThreadsInLockMenu::menuOptions = {
-    "Close lock", "Open lock"
+    "Close lock (lock())", "Open lock (unlock())", "Try lock"
 };
 
 void ThreadsInLockMenu::menu()
