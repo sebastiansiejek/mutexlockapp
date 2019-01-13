@@ -49,14 +49,29 @@ void ThreadsInLockMenu::openLock(Thread* thread, Lock* lock)
     }
 }
 
+void ThreadsInLockMenu::tryLock(Thread * thread, Lock* lock)
+{
+    if(!lock->isClosed()) {
+        lock->setCloseLock(thread);
+        std::cout << lock->getName() << " was closed by " << thread->getName();
+    } else {
+        std::cout << "Lock " << lock->getName() << " was open, so it was closed.";
+    }
+}
+
 void ThreadsInLockMenu::options(int option, Thread* thread, Lock* lock)
 {
     switch (option) {
         case 1:
             ThreadsInLockMenu::closeLock(thread, lock);
             break;
-        default:
+        case 2:
             ThreadsInLockMenu::openLock(thread, lock);
+            break;
+        case 3:
+            ThreadsInLockMenu::tryLock(thread, lock);
+            break;
+        default:
             break;
     }
 }
