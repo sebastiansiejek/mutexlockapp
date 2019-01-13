@@ -41,6 +41,7 @@ void Menu::selectOption(int option)
             std::cout << "Select option: ";
             std::cin >> option;
             ThreadMenu::options(option);
+            break;
         default:
             break;
     }
