@@ -112,3 +112,14 @@ void Lock::displayThreadsWaitingUnderLock()
         std::cout << "No thread is waiting under lock";
     }
 }
+
+void Lock::pushWaitingThreadsToLock()
+{
+    if(this->getWaitingThreads().size() > 0) {
+        for(auto &e : this->getWaitingThreads()) {
+            this->_threadsInLock.push_back(e);
+        }
+        this->_waitingThreads.clear();
+        std::cout << "\nWaiting threads under lock were moved to lock\n";
+    }
+}

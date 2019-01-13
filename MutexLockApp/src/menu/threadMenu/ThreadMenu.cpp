@@ -67,10 +67,15 @@ void ThreadMenu::addToLock()
                 std::cout << "Thread " << thread->getName() << " was added to " << lock->getName();
             } else {
                 std::cout << "Thread " << thread->getName() << " already exist in " << lock->getName();
+                return;
             }
         } else {
-            lock->pushThreadToWaiting(thread);
-            std::cout << "Lock " << lock->getName() << " is closed. " << "Thread " << thread->getName() << " is waitng under lock.";
+            if(lock->isThreadInWaitingExist(thread->getName())) {
+                std::cout << "Thread " << thread->getName() << " has already been exist in waiting threads in " << lock->getName();
+            } else {
+                lock->pushThreadToWaiting(thread);
+                std::cout << "Lock " << lock->getName() << " is closed. " << "Thread " << thread->getName() << " is waitng under lock.";
+            }
         }
     }
 }

@@ -42,6 +42,7 @@ public:
     void openLock(Thread*);
     void pushThreadToWaiting(Thread*);
     void displayThreadsWaitingUnderLock();
+    void pushWaitingThreadsToLock();
 };
 
 #endif /* lock_hpp */
