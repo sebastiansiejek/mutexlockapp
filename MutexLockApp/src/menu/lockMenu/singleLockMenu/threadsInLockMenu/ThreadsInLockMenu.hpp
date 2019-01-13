@@ -22,6 +22,7 @@ public:
     static void menu();
     static void options(int, Thread*, Lock*);
     static void closeLock(Thread*, Lock*);
+    static void openLock(Thread*, Lock*);
 };
 
 #endif /* ThreadsInLockMenu_hpp */

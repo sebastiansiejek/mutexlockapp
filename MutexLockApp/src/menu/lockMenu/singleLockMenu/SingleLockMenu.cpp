@@ -9,7 +9,7 @@
 #include "SingleLockMenu.hpp"
 
 std::list<std::string> SingleLockMenu::menuOptions = {
-    "Display threads in lock", "Select thread", "Display thread that closed lock", "Display threads waiting under lock"
+    "Display threads in lock", "Select thread from lock", "Display thread that closed lock", "Display threads waiting under lock"
 };
 
 void SingleLockMenu::menu()
@@ -25,19 +25,23 @@ void SingleLockMenu::menu()
 
 void SingleLockMenu::selectThread(Lock* lock)
 {
-    lock->displayThreadsInLock();
-    int option = 0;
-    std::cout << "Select thread: ";
-    std::cin >> option;
+    if(lock->getThreadsInLock().size() > 0) {
+        lock->displayThreadsInLock();
+        int option = 0;
+        std::cout << "Select thread: ";
+        std::cin >> option;
     
-    Thread* thread = lock->getThreadFromLock(option);
-    std::cout << "You selected thread: ";
-    std::cout << thread->getName();
-    ThreadsInLockMenu::menu();
-    std::cout << "Select option: ";
-    int threadOption = 0;
-    std::cin >> threadOption;
-    ThreadsInLockMenu::options(threadOption, thread, lock);
+        Thread* thread = lock->getThreadFromLock(option);
+        std::cout << "You selected thread: ";
+        std::cout << thread->getName();
+        ThreadsInLockMenu::menu();
+        std::cout << "Select option: ";
+        int threadOption = 0;
+        std::cin >> threadOption;
+        ThreadsInLockMenu::options(threadOption, thread, lock);
+    } else {
+        std::cout << "\n" << lock->getName() << " is empty.";
+    }
 }
 
 void SingleLockMenu::displayClosingThread(Lock* lock)
@@ -45,7 +49,7 @@ void SingleLockMenu::displayClosingThread(Lock* lock)
     if(lock->isClosed())
         std::cout << "Thread that closed lock: " << lock->getClosingThread()->getName();
     else
-        std::cout << "Lock is OPEN";
+        std::cout << "Lock is OPEN.";
 }
 
 void SingleLockMenu::options(int option, Lock* lock)
@@ -56,7 +60,7 @@ void SingleLockMenu::options(int option, Lock* lock)
                 std::cout << "Threads in lock: \n";
                 lock->displayThreadsInLock();
             } else {
-                std::cout << "Lock " << lock->getName() << " has NOT threads ";
+                std::cout << "Lock " << lock->getName() << " has NOT threads.";
             }
             break;
         case 2:
