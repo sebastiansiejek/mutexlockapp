@@ -39,6 +39,7 @@ public:
     void pushThreadToLock(Thread*);
     void displayThreadsInLock();
     void setCloseLock(Thread*);
+    void openLock(Thread*);
     void pushThreadToWaiting(Thread*);
     void displayThreadsWaitingUnderLock();
 };

@@ -56,6 +56,15 @@ void Lock::setCloseLock(Thread* thread)
     this->_closed.thread = thread;
 }
 
+void Lock::openLock(Thread* thread)
+{
+    if (this->isClosed()) {
+        if (this->getClosingThread()->getName() == thread->getName()) {
+            this->_closed.isClosed = false;
+        }
+    }
+}
+
 bool Lock::isClosed()
 {
     if(this->_closed.isClosed == true)

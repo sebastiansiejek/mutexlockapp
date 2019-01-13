@@ -37,11 +37,12 @@ void ThreadsInLockMenu::closeLock(Thread* thread, Lock* lock)
 void ThreadsInLockMenu::openLock(Thread* thread, Lock* lock)
 {
     if(!lock->isClosed()) {
-        std::cout << lock->getName() << " is NOT closed.\n";
+        std::cout << lock->getName() << " is NOT closed.1\n";
         return;
     }
     if(lock->getClosingThread()->getName() == thread->getName()) {
-        
+        lock->openLock(thread);
+        std::cout << "Lock" << lock->getName() << " was open";
     } else {
         std::cout << "Thread " << thread->getName() << " did not closed " << "lock " << lock->getName();
     }
@@ -52,6 +53,7 @@ void ThreadsInLockMenu::options(int option, Thread* thread, Lock* lock)
     switch (option) {
         case 1:
             ThreadsInLockMenu::closeLock(thread, lock);
+            break;
         default:
             ThreadsInLockMenu::openLock(thread, lock);
             break;
