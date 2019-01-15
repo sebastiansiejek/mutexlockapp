@@ -15,8 +15,6 @@
 class MutexLockApp : public Menu
 {
 public:
-    MutexLockStore *store = new MutexLockStore;
-
     MutexLockApp()
     {
         int option = 1;

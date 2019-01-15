@@ -11,11 +11,11 @@
 
 #include <stdio.h>
 #include <list>
-#include "../../stores/mutexLockStore/MutexLockStore.hpp"
 #include "../../stores/mutexLockStore/lockStoreStatic/lockStoreStatic.hpp"
 #include "../../stores/mutexLockStore/threadStoreStatic/ThreadStoreStatic.hpp"
+#include "../../factories/MutexLockFactory/MutexLockFactory.hpp"
 
-class ThreadMenu : public MutexLockStore
+class ThreadMenu
 {
 private:private:
     static std::list<std::string> menuOptions;
