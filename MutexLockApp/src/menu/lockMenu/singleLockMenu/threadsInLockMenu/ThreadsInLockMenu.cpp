@@ -55,7 +55,7 @@ void ThreadsInLockMenu::tryLock(Thread * thread, Lock* lock)
         lock->setCloseLock(thread);
         std::cout << lock->getName() << " was closed by " << thread->getName();
     } else {
-        std::cout << "Lock " << lock->getName() << " was open, so it was closed.";
+        std::cout << "Lock " << lock->getName() << " was already close.";
     }
 }
 
