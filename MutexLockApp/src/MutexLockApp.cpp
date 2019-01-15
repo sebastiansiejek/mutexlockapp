@@ -9,7 +9,6 @@
 #include <stdio.h>
 #include <iostream>
 #include "menu/Menu.hpp"
-#include "stores/mutexLockStore/MutexLockStore.hpp"
 #include "mutexLock/mutexLock.hpp"
 
 class MutexLockApp : public Menu

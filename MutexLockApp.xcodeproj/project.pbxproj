@@ -15,7 +15,6 @@
 		E459242F21E0B7B7003FB344 /* lockStoreStatic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E459242D21E0B7B7003FB344 /* lockStoreStatic.cpp */; };
 		E459243421E0C969003FB344 /* ThreadStoreStatic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E459243221E0C969003FB344 /* ThreadStoreStatic.cpp */; };
 		E459243921E0F799003FB344 /* SingleThreadMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E459243721E0F799003FB344 /* SingleThreadMenu.cpp */; };
-		E4607F8221D4D87500CF7DCF /* MutexLockStore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4607F8021D4D87500CF7DCF /* MutexLockStore.cpp */; };
 		E4607F8421D4DA6900CF7DCF /* MutexLockApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4607F8321D4DA6900CF7DCF /* MutexLockApp.cpp */; };
 		E4607F8921D637EA00CF7DCF /* LockMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4607F8721D637EA00CF7DCF /* LockMenu.cpp */; };
 		E4607F8D21D66AF100CF7DCF /* ThreadMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4607F8B21D66AF100CF7DCF /* ThreadMenu.cpp */; };
@@ -53,8 +52,6 @@
 		E459243321E0C969003FB344 /* ThreadStoreStatic.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ThreadStoreStatic.hpp; sourceTree = "<group>"; };
 		E459243721E0F799003FB344 /* SingleThreadMenu.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SingleThreadMenu.cpp; sourceTree = "<group>"; };
 		E459243821E0F799003FB344 /* SingleThreadMenu.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SingleThreadMenu.hpp; sourceTree = "<group>"; };
-		E4607F8021D4D87500CF7DCF /* MutexLockStore.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MutexLockStore.cpp; sourceTree = "<group>"; };
-		E4607F8121D4D87500CF7DCF /* MutexLockStore.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MutexLockStore.hpp; sourceTree = "<group>"; };
 		E4607F8321D4DA6900CF7DCF /* MutexLockApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MutexLockApp.cpp; sourceTree = "<group>"; };
 		E4607F8721D637EA00CF7DCF /* LockMenu.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LockMenu.cpp; sourceTree = "<group>"; };
 		E4607F8821D637EA00CF7DCF /* LockMenu.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LockMenu.hpp; sourceTree = "<group>"; };
@@ -204,8 +201,6 @@
 			children = (
 				E459243121E0C951003FB344 /* threadStoreStatic */,
 				E459243021E0B7BE003FB344 /* lockStoreStatic */,
-				E4607F8021D4D87500CF7DCF /* MutexLockStore.cpp */,
-				E4607F8121D4D87500CF7DCF /* MutexLockStore.hpp */,
 			);
 			path = mutexLockStore;
 			sourceTree = "<group>";
@@ -315,7 +310,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4607F8921D637EA00CF7DCF /* LockMenu.cpp in Sources */,
-				E4607F8221D4D87500CF7DCF /* MutexLockStore.cpp in Sources */,
 				E459243421E0C969003FB344 /* ThreadStoreStatic.cpp in Sources */,
 				E4607F8D21D66AF100CF7DCF /* ThreadMenu.cpp in Sources */,
 				E4607FA821D8FFCA00CF7DCF /* SingleLockMenu.cpp in Sources */,
