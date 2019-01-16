@@ -13,16 +13,18 @@
 #include <string>
 #include <iostream>
 #include "Thread.hpp"
-//#include "../lock/Lock.hpp"
 #include "../../mutexLock/mutexLock.hpp"
 
 class Thread : public MutexLock
 {
 private:
     std::string _name;
+    bool _isWaiting = false;
 public:
     Thread(std::string);
     std::string getName() override;
+    void setWaiting();
+    bool getIsWaiting();
 };
 
 #endif /* Thread_hpp */
