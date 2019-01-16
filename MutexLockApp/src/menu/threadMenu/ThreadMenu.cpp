@@ -70,7 +70,9 @@ void ThreadMenu::addToLock()
                 return;
             }
         } else {
-            if(lock->isThreadInWaitingExist(thread->getName())) {
+            if(lock->isThreadInLockExist(thread->getName())) {
+                std::cout << "Thread " << thread->getName() << " has already exist in " << lock->getName();
+            } else if(lock->isThreadInWaitingExist(thread->getName())) {
                 std::cout << "Thread " << thread->getName() << " has already been exist in waiting threads in " << lock->getName();
             } else {
                 lock->pushThreadToWaiting(thread);
