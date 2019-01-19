@@ -18,9 +18,9 @@ std::string Thread::getName()
     return this->_name;
 }
 
-void Thread::setWaiting()
+void Thread::setWaiting(bool flag)
 {
-    this->_isWaiting = true;
+    this->_isWaiting = flag;
 }
 
 bool Thread::getIsWaiting()

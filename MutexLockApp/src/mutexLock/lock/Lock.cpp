@@ -116,8 +116,9 @@ void Lock::displayThreadsWaitingUnderLock()
 void Lock::pushWaitingThreadsToLock()
 {
     if(this->getWaitingThreads().size() > 0) {
-        for(auto &e : this->getWaitingThreads()) {
-            this->_threadsInLock.push_back(e);
+        for(auto &thread : this->getWaitingThreads()) {
+            thread->setWaiting(false);
+            this->_threadsInLock.push_back(thread);
         }
         this->_waitingThreads.clear();
         std::cout << "\nWaiting threads under lock were moved to lock\n";

@@ -29,10 +29,13 @@ void ThreadMenu::addToStore()
     std::string threadName;
     std::cout << "Enter thread name: ";
     std::cin >> threadName;
-    if(ThreadStoreStatic::isThreadExist(threadName))
+    if(ThreadStoreStatic::isThreadExist(threadName)) {
         std::cout << "Thread " << threadName << " already exist\n";
-    else
-        return ThreadStoreStatic::add(MutexLockFactory::createThread(threadName));
+    }
+    else {
+        ThreadStoreStatic::add(MutexLockFactory::createThread(threadName));
+        std::cout << "Thread " << threadName << " was created\n";
+    }
 }
 
 void ThreadMenu::addToLock()
@@ -80,7 +83,7 @@ void ThreadMenu::addToLock()
             } else if(lock->isThreadInWaitingExist(thread->getName())) {
                 std::cout << "Thread " << thread->getName() << " has already been exist in waiting threads in " << lock->getName();
             } else {
-                thread->setWaiting();
+                thread->setWaiting(true);
                 lock->pushThreadToWaiting(thread);
                 std::cout << "Lock " << lock->getName() << " is closed. " << "Thread " << thread->getName() << " is waitng under lock.";
             }

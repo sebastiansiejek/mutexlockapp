@@ -23,7 +23,7 @@ private:
 public:
     Thread(std::string);
     std::string getName() override;
-    void setWaiting();
+    void setWaiting(bool);
     bool getIsWaiting();
 };
 
